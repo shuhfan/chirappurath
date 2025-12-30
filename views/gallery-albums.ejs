@@ -1,0 +1,30 @@
+<section class="gallery-wrapper">
+  <div class="container">
+
+    <h1 class="page-title text-center">ഗാലറി</h1>
+    <div class="about-divider"></div>
+
+    <div class="row">
+
+      <!-- Common -->
+      <div class="col-md-4 mb-4">
+        <a href="/gallery/common" class="gallery-card">
+          <div class="card-inner">
+            <h3>Common Gallery</h3>
+          </div>
+        </a>
+      </div>
+
+      <% branches.forEach(b => { %>
+        <div class="col-md-4 mb-4">
+          <a href="/gallery/<%= b._id %>" class="gallery-card">
+            <div class="card-inner">
+              <h3><%= b.name_ml %></h3>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+
+    </div>
+  </div>
+</section>

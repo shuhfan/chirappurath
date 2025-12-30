@@ -1,0 +1,29 @@
+<section class="gallery-wrapper">
+  <div class="container">
+
+    <h1 class="page-title text-center"><%= title %></h1>
+    <div class="about-divider"></div>
+
+    <div class="row g-4">
+      <% images.forEach(img => { %>
+        <div class="col-md-4 col-sm-6">
+          <a href="<%= img.imagePath %>" class="glightbox">
+            <div class="gallery-img-box">
+              <img src="<%= img.imagePath %>" loading="lazy">
+              <% if (img.description_ml) { %>
+                <div class="img-caption">
+                  <%= img.description_ml %>
+                </div>
+              <% } %>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+
+    <% if (images.length === 0) { %>
+      <p class="text-center text-muted mt-5">No images available</p>
+    <% } %>
+
+  </div>
+</section>

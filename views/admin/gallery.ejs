@@ -1,0 +1,70 @@
+<%- include("layout") %>
+
+<div class="admin-box mb-5">
+
+  <h4 class="mb-4">Upload Gallery Image</h4>
+
+  <form method="post" action="/admin/gallery/upload" enctype="multipart/form-data">
+
+    <!-- Branch -->
+    <div class="mb-3">
+      <label class="form-label">Select Branch</label>
+      <select name="branch" class="form-select" required>
+        <option value="COMMON">Common Gallery</option>
+        <% branches.forEach(b => { %>
+          <option value="<%= b._id %>"><%= b.name_ml %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <!-- Image -->
+    <div class="mb-3">
+      <label class="form-label">Select Image</label>
+      <input type="file" name="image" class="form-control" accept="image/*" required onchange="previewImage(event)">
+      <img id="preview" class="preview-img">
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label class="form-label">Description (Malayalam)</label>
+      <textarea name="description_ml" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-dark">Upload Image</button>
+
+  </form>
+
+</div>
+
+<!-- Uploaded Images -->
+<div class="admin-box">
+  <h4 class="mb-4">Uploaded Images</h4>
+
+  <div class="row">
+    <% images.forEach(img => { %>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="<%= img.imagePath %>" class="card-img-top">
+          <div class="card-body text-center">
+            <form method="post" action="/admin/gallery/delete/<%= img._id %>" onsubmit="return confirmDelete()">
+              <button class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+</div>
+
+<script>
+function previewImage(e) {
+  const img = document.getElementById("preview");
+  img.src = URL.createObjectURL(e.target.files[0]);
+  img.style.display = "block";
+}
+
+function confirmDelete() {
+  return confirm("Are you sure you want to delete this image?");
+}
+</script>

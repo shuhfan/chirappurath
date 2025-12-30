@@ -1,0 +1,101 @@
+<div id="ribbonOverlay">
+  <div class="overlay-content">
+
+    <div class="fullscreen-ribbon">
+      <div class="ribbon-half left"></div>
+      <div class="ribbon-half right"></div>
+    </div>
+
+    <button class="btn-heritage mt-4" onclick="cutRibbon()">
+      Inaugurate
+    </button>
+
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="hero-box">
+
+    <!-- LOGO -->
+    <img src="/images/logo.png" class="hero-logo" alt="Chirappurath Family">
+
+    <!-- TITLE -->
+    <h1 class="hero-title">CHIRAPPURATH FAMILY</h1>
+
+    <div class="hero-line"></div>
+
+    <!-- SUB TITLE -->
+    <div class="hero-sub">
+      വിശ്വാസവും പാരമ്പര്യവും ഒരുമിച്ചൊരു കുടുംബചരിത്രം
+    </div>
+
+    
+  </div>
+</section>
+
+<section class="branches-section">
+  <div class="container">
+
+    <h2 class="section-heading text-center">
+      കുടുംബ ശാഖകൾ
+    </h2>
+    <div class="about-divider"></div>
+
+    <div class="row">
+
+      <% const branches = [
+        "നടുവിലേടം","കാരണിക്കുളം","കിഴക്കേക്കുറ്റ്","ചേലചിറ",
+        "വല്യവീട്ടിൽ","തണുങ്ങുംപതിയ്ക്കൽ","കിഴക്കേമുറി","ചിറത്തലയ്ക്കൽ",
+        "മറ്റത്തിൽ","തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)",
+        "തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)","ചിറപ്പുറത്ത്"
+      ]; %>
+
+      <% branches.forEach(name => { %>
+        <div class="col-md-3 col-sm-6 mb-4">
+  <div class="branch-card-premium">
+    <span><%= name %></span>
+  </div>
+</div>
+
+      <% }) %>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONFETTI -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+(function () {
+  // If already inaugurated, hide overlay
+  if (localStorage.getItem("inaugurated") === "true") {
+    const overlay = document.getElementById("ribbonOverlay");
+    if (overlay) overlay.remove();
+  }
+})();
+
+function cutRibbon() {
+  document.querySelector(".fullscreen-ribbon").classList.add("cut");
+
+  // Confetti
+  let end = Date.now() + 2500;
+  (function frame() {
+    confetti({
+      particleCount: 8,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+    if (Date.now() < end) requestAnimationFrame(frame);
+  })();
+
+  // Save state & remove overlay
+  setTimeout(() => {
+    localStorage.setItem("inaugurated", "true");
+    document.getElementById("ribbonOverlay").remove();
+  }, 1200);
+}
+</script>
+
