@@ -4,10 +4,6 @@ const branchSchema = new mongoose.Schema({
   name_ml: {
     type: String,
     required: true
-  },
-  name_en: {
-    type: String,
-    required: true
   }
 });
 

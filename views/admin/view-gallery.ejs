@@ -1,0 +1,41 @@
+<%- include('header') %>
+
+<div class="admin-box">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4>Gallery Images</h4>
+    <a href="/admin/gallery/add" class="btn btn-dark">+ Add New</a>
+  </div>
+
+  <% if (images.length === 0) { %>
+    <div class="alert alert-info">
+      No images uploaded yet. <a href="/admin/gallery/add">Add one now</a>
+    </div>
+  <% } else { %>
+    <div class="row">
+      <% images.forEach(img => { %>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="<%= img.thumbPath || img.imagePath %>" class="card-img-top" style="height: 200px; object-fit: cover;">
+            
+            <div class="card-body text-center">
+              <small class="text-muted d-block mb-2">Order: <%= img.sortOrder %></small>
+              <% if (img.description_ml) { %>
+                <p class="small text-muted mb-3"><%= img.description_ml.substring(0, 50) %>...</p>
+              <% } %>
+            </div>
+            
+            <div class="card-footer bg-light border-top">
+              <a href="/admin/gallery/edit/<%= img._id %>" class="btn btn-sm btn-secondary w-100 mb-2">Edit</a>
+              
+              <form method="POST" action="/admin/gallery/delete/<%= img._id %>" style="display: inline-block; width: 100%;" onsubmit="return confirm('Delete this image?');">
+                <button type="submit" class="btn btn-sm btn-danger w-100">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</div>
+
+<%- include('footer') %>

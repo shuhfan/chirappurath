@@ -5,12 +5,21 @@ const gallerySchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  thumbPath: {
+    type: String,
+    default: null
+  },
   branch: {
-    type: String, // "COMMON" or Branch ID
-    required: true
+    type: String,
+    default: 'COMMON'
   },
   description_ml: {
-    type: String
+    type: String,
+    default: ''
+  },
+  sortOrder: {
+    type: Number,
+    default: 0
   },
   createdAt: {
     type: Date,

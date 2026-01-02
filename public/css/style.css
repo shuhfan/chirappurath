@@ -425,7 +425,6 @@ a {
   text-align: center;
 }
 
-/* Full width ribbon */
 .fullscreen-ribbon {
   width: 80vw;
   height: 110px;
@@ -433,7 +432,7 @@ a {
   margin: auto;
 }
 
-.ribbon-half {
+.fullscreen-ribbon .ribbon-half {
   position: absolute;
   top: 0;
   width: 50%;
@@ -443,23 +442,22 @@ a {
   transition: all 1s ease;
 }
 
-.ribbon-half.left {
+.fullscreen-ribbon .ribbon-half.left {
   left: 0;
   background-position: left center;
 }
 
-.ribbon-half.right {
+.fullscreen-ribbon .ribbon-half.right {
   right: 0;
   background-position: right center;
 }
 
-/* Cut animation */
-.fullscreen-ribbon.cut .left {
+.fullscreen-ribbon.cut .ribbon-half.left {
   transform: translateX(-120px) rotate(-10deg);
   opacity: 0;
 }
 
-.fullscreen-ribbon.cut .right {
+.fullscreen-ribbon.cut .ribbon-half.right {
   transform: translateX(120px) rotate(10deg);
   opacity: 0;
 }

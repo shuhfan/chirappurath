@@ -1,17 +1,16 @@
-const Branch = require("../models/Branch");
-const Gallery = require("../models/Gallery");
-const translateToEnglish = require("../utils/translate");
+const Branch = require('../models/Branch');
+const Gallery = require('../models/Gallery');
+const translate = require('../utils/translate');
 
-exports.home = (req, res) => {
-  res.render("home", {
-    lang: req.session.lang || "ml"
-  });
+exports.home = async (req, res) => {
+  // load first few branch names for home premium tiles (we store only Malayalam)
+  const branches = await Branch.find().lean();
+  res.render('home', { lang: req.session.lang || 'ml', branches });
 };
 
 exports.about = async (req, res) => {
-  const lang = req.session.lang || "ml";
-
-  const content_ml = `
+  const lang = req.session.lang || 'ml';
+  const content_ml =  `
 കേരളത്തിൽ പ്രാചീന കുടുംബങ്ങളിൽപ്പെട്ട ക്രിസ്ത്യാനികളെല്ലാം, തങ്ങളുടെ ഉത്ഭവം മാർത്തോമ്മാ ശ്ലീഹാ A.D 52- ൽ ഇവിടെ വന്നത് മുതലാണെന്ന് അവകാശപ്പെടുന്നവരും, അതിൽ അഭിമാനിക്കുന്നവരുമാണ്. ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആധുനിക കാലം വരെയുള്ള പ്രസ്തുത ചരിത്രത്തിൻ്റെ കണ്ണികൾ ഇടമുറിയാതെ ചേർത്ത് വയ്ക്കുവാൻ ആർക്കും സാധ്യമല്ല. ചിറപ്പുറത്ത് കുടുംബചരിത്ര ഗ്രന്ഥത്തിൽ കിട്ടാവുന്ന എല്ലാ ചരിത്രരേഖകളും, പൂർവ്വീകന്മാരിൽ നിന്നും പരമ്പരാഗതമായി ലഭിച്ചിട്ടുള്ള വിവരങ്ങളും ക്രോഡീകരിച്ച് അവയുടെ അടിസ്ഥാനത്തിൽ ആധുനിക കാലഘട്ടത്തെ സവിസ്തരം പ്രതിപാദിക്കുവാൻ ശ്രമിച്ചിട്ടുണ്ട്.
     മാർത്തോമ്മാ ശ്ലീഹാ മലയാളക്കരയിൽ വന്നിറങ്ങിയതിനു ശേഷം കൊടുങ്ങല്ലൂർ, പാലയൂർ, പറവൂർ, നിരണം, കൊല്ലം, തെക്കൻ പള്ളിപ്പുറം, നിലയ്ക്കൽ എന്നീ സ്ഥലങ്ങളിൽ പള്ളികൾ സ്ഥാപിച്ചതായും  കള്ളി, കാളിയാങ്കൽ, ശങ്കരപുരി, പകലോമറ്റം എന്നീ ബ്രാമണ കുടുംബങ്ങളെ ക്രിസ്തു മതത്തിലേക്ക് പരിവർത്തനം ചെയ്യിച്ചതായും അവരിൽ നിന്ന് അപ്പോസ്തോലിക മാതൃകയിൽ കൈവെപ്പോടുകൂടി വൈദീകരെ സഭാ ശുശ്രൂഷയ്ക്കായി പ്രതിഷ്ഠിച്ചതായും വിശ്വസിക്കുന്നു. അതിൽ കള്ളി ഇല്ലക്കാരിൽ ചിലർ വിവിധ കാരണങ്ങളാൽ A.D 337 ൽ പാലയൂരിൽ നിന്നും പുറപ്പെട്ട് കുറവലങ്ങാട്ട് വന്നു താമസിച്ചെന്നും A.D 345 ൽ ക്നായിതൊമ്മ ൻ്റെ കൂടെ വന്ന ജോസഫ് മെത്രാൻ അവർക്ക് ഒരു പള്ളി കൂദാശ ചെയ്തു കൊടുത്തെന്നും 
 " മാർത്തോമ്മാ ശ്ലീഹായുടെ ചരിത്രം" എന്ന ഗ്രന്ഥത്തിൽ രേഖപ്പെടുത്തിയിട്ടുണ്ട്. അവിടെ നിന്നും ഏതാണ്ട് 500 വർഷങ്ങൾക്കു മുമ്പ് കള്ളി ഇല്ലത്ത് ഭവനത്തിലെ കുരുവിള എന്ന് ആൾ തോട്ടയ്ക്കാട്ട് വന്നു താമസം തുടങ്ങി. 
@@ -22,44 +21,40 @@ exports.about = async (req, res) => {
         ചിറപ്പുറത്ത് കുടുംബത്തിന് "തോട്ടയ്ക്കാട് "
   " കുഴിമറ്റം" എന്ന് രണ്ടു ശാഖകൾ ഉണ്ട്. കള്ളി ഇല്ലത്ത് കുരുവിള യുടെ ഏഴാം തലമുറക്കാരനായ തോട്ടയ്ക്കാട് ചിറപ്പുറത്ത് കുരുവിള യുടെ മൂന്നാമത്തെ പുത്രൻ വർക്കി കുഴിമറ്റം ശാഖ തലവനും ഇളയ പുത്രൻ കുരുവിള തോട്ടയ്ക്കാട് ശാഖ തലവനും ആണ്. മറ്റു മൂന്നു പിതാക്കന്മാർക്ക് പെൺമക്കൾ മാത്രം ആയിരുന്നു. അവരെ യഥാക്രമം പടിഞ്ഞാറെമുറി, കടപ്പൂര്, കണ്ണൊഴുക്കം എന്നീ കുടുംബങ്ങളിൽ വിവാഹം ചെയ്തയച്ചു.
 `;
-
   let content = content_ml;
-  if (lang === "en") {
-    content = await translateToEnglish(content_ml);
-  }
-
-  res.render("about", {
-    content,
-    lang
-  });
+  if (lang === 'en') content = await translate(content_ml);
+  res.render('about', { lang, content });
 };
 
-
+// Gallery landing (albums)
 exports.galleryAlbums = async (req, res) => {
-  const branches = await Branch.find();
-
-  res.render("gallery-albums", {
-    branches
-  });
+  const branches = await Branch.find().lean();
+  res.render('gallery-albums', { branches });
 };
 
+// Gallery images of branch
 exports.galleryImages = async (req, res) => {
   const branch = req.params.branch;
-
   let images;
-  let title;
-
-  if (branch === "common") {
-    images = await Gallery.find({ branch: "COMMON" });
-    title = "Common Gallery";
+  if (branch === 'common') {
+    images = await Gallery.find({ branch: 'COMMON' }).sort({ sortOrder: 1, createdAt: -1 }).lean();
   } else {
-    images = await Gallery.find({ branch });
-    const br = await Branch.findById(branch);
-    title = br ? br.name_ml : "Gallery";
+    images = await Gallery.find({ branch }).sort({ sortOrder: 1, createdAt: -1 }).lean();
   }
 
-  res.render("gallery-images", {
-    images,
-    title
-  });
+  // If english, attach translated description (cached util)
+  if ((req.session.lang || 'ml') === 'en') {
+    for (let img of images) {
+      img.description_en = img.description_ml ? await translate(img.description_ml) : '';
+    }
+  }
+
+  // resolve branch name for title
+  let title = 'Gallery';
+  if (branch !== 'common') {
+    const br = await Branch.findById(branch);
+    title = br ? br.name_ml : 'Gallery';
+  } else title = 'Common Gallery';
+
+  res.render('gallery-images', { images, title, lang: req.session.lang || 'ml' });
 };

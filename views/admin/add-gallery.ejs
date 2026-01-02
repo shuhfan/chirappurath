@@ -1,0 +1,54 @@
+<%- include('header') %>
+
+<div class="admin-box">
+  <h4>Add Gallery Image</h4>
+  
+  <% if (typeof error !== 'undefined') { %>
+    <div class="alert alert-danger"><%= error %></div>
+  <% } %>
+
+  <form method="post" action="/admin/gallery/upload" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label">Branch</label>
+      <select name="branch" class="form-select" required>
+        <option value="COMMON">Common</option>
+        <% branches.forEach(b => { %>
+          <option value="<%= b._id %>"><%= b.name_ml %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Image *</label>
+      <input type="file" name="image" class="form-control" accept="image/jpeg,image/png,image/webp" required onchange="previewImage(event)">
+      <small class="text-muted">Max 5MB. Formats: JPEG, PNG, WebP</small>
+      <img id="preview" style="display:none; max-height:250px; margin-top:15px; border-radius:6px;">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description (Malayalam)</label>
+      <textarea name="description_ml" class="form-control" rows="3" maxlength="500"></textarea>
+      <small class="text-muted">Max 500 characters</small>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Sort Order</label>
+      <input type="number" name="sortOrder" class="form-control" value="0" min="0">
+    </div>
+
+    <button type="submit" class="btn btn-dark">Upload</button>
+    <a href="/admin/gallery" class="btn btn-link">Cancel</a>
+  </form>
+</div>
+
+<script>
+function previewImage(e) {
+  const preview = document.getElementById('preview');
+  if (e.target.files && e.target.files[0]) {
+    preview.src = URL.createObjectURL(e.target.files[0]);
+    preview.style.display = 'block';
+  }
+}
+</script>
+
+<%- include('footer') %>

@@ -1,29 +1,37 @@
-const cache = {};
+// utils/translate.js
+const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
 
-async function translateMLtoEN(text) {
-  if (!text) return "";
-  if (cache[text]) return cache[text];
+const CACHE_FILE = path.join(__dirname, '..', 'translations.json');
+let cache = {};
 
-  const url =
-    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=ml&tl=en&dt=t&q=" +
-    encodeURIComponent(text);
-
-  const res = await fetch(url);
-
-  // ❗ check response type
-  const contentType = res.headers.get("content-type");
-
-  if (!contentType || !contentType.includes("application/json")) {
-    const html = await res.text(); // read HTML
-    console.error("Not JSON response:", html.substring(0, 200));
-    return text; // fallback
+// load cache if exists
+try {
+  if (fs.existsSync(CACHE_FILE)) {
+    cache = JSON.parse(fs.readFileSync(CACHE_FILE));
   }
-
-  const data = await res.json();
-  const translated = data[0].map(i => i[0]).join("");
-
-  cache[text] = translated;
-  return translated;
+} catch (e) {
+  console.warn('Translation cache load error', e);
 }
 
-module.exports = translateMLtoEN;
+async function translateToEN(text) {
+  if (!text) return '';
+  if (cache[text]) return cache[text];
+
+  const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=ml&tl=en&dt=t&q=' + encodeURIComponent(text);
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const translated = data[0].map(item => item[0]).join('');
+    cache[text] = translated;
+    // safe write
+    try { fs.writeFileSync(CACHE_FILE, JSON.stringify(cache), { encoding: 'utf8' }); } catch (e) {}
+    return translated;
+  } catch (err) {
+    console.error('Translate failed', err);
+    return text; // fallback to original
+  }
+}
+
+module.exports = translateToEN;

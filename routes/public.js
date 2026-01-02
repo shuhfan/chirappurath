@@ -1,22 +1,18 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const pageController = require("../controllers/pageController");
+const pageController = require('../controllers/pageController');
 
-
-router.get("/lang/:type", (req, res) => {
-  req.session.lang = req.params.type; // ml or en
-  res.redirect("back");
+// lang switch
+router.get('/lang/:type', (req,res)=>{
+  req.session.lang = (req.params.type === 'en') ? 'en' : 'ml';
+  res.redirect('back');
 });
 
-// Home page
-router.get("/", pageController.home);
+router.get('/', pageController.home);
+router.get('/about', pageController.about);
 
-// About page
-router.get("/about", pageController.about);
-
-// Gallery page
-router.get("/gallery", pageController.galleryAlbums);
-router.get("/gallery/:branch", pageController.galleryImages);
-
+// gallery
+router.get('/gallery', pageController.galleryAlbums);
+router.get('/gallery/:branch', pageController.galleryImages);
 
 module.exports = router;

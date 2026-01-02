@@ -1,14 +1,13 @@
-<%- include("layout") %>
+<%- include("header") %>
 
+<!-- UPLOAD SECTION -->
 <div class="admin-box mb-5">
-
   <h4 class="mb-4">Upload Gallery Image</h4>
 
   <form method="post" action="/admin/gallery/upload" enctype="multipart/form-data">
 
-    <!-- Branch -->
     <div class="mb-3">
-      <label class="form-label">Select Branch</label>
+      <label class="form-label">Branch</label>
       <select name="branch" class="form-select" required>
         <option value="COMMON">Common Gallery</option>
         <% branches.forEach(b => { %>
@@ -17,26 +16,22 @@
       </select>
     </div>
 
-    <!-- Image -->
     <div class="mb-3">
-      <label class="form-label">Select Image</label>
+      <label class="form-label">Image</label>
       <input type="file" name="image" class="form-control" accept="image/*" required onchange="previewImage(event)">
-      <img id="preview" class="preview-img">
+      <img id="preview" style="display:none; margin-top:10px; max-height:200px;">
     </div>
 
-    <!-- Description -->
     <div class="mb-3">
       <label class="form-label">Description (Malayalam)</label>
       <textarea name="description_ml" class="form-control" rows="3"></textarea>
     </div>
 
-    <button class="btn btn-dark">Upload Image</button>
-
+    <button class="btn btn-dark">Upload</button>
   </form>
-
 </div>
 
-<!-- Uploaded Images -->
+<!-- IMAGE LIST -->
 <div class="admin-box">
   <h4 class="mb-4">Uploaded Images</h4>
 
@@ -46,7 +41,7 @@
         <div class="card">
           <img src="<%= img.imagePath %>" class="card-img-top">
           <div class="card-body text-center">
-            <form method="post" action="/admin/gallery/delete/<%= img._id %>" onsubmit="return confirmDelete()">
+            <form method="post" action="/admin/gallery/delete/<%= img._id %>" onsubmit="return confirm('Delete this image?')">
               <button class="btn btn-sm btn-outline-danger">Delete</button>
             </form>
           </div>
@@ -54,7 +49,6 @@
       </div>
     <% }) %>
   </div>
-
 </div>
 
 <script>
@@ -63,8 +57,6 @@ function previewImage(e) {
   img.src = URL.createObjectURL(e.target.files[0]);
   img.style.display = "block";
 }
-
-function confirmDelete() {
-  return confirm("Are you sure you want to delete this image?");
-}
 </script>
+
+<%- include("footer") %>
