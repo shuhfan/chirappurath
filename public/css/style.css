@@ -638,7 +638,7 @@ a {
 
 .father-image {
   width: 100%;
-  height: 320px;
+  height: 420px;
   overflow: hidden;
   position: relative;
   background: #e0e0e0;
@@ -735,7 +735,7 @@ a {
   }
 
   .father-image {
-    height: 420px;
+    height: 540px;
   }
 
   .father-card {
