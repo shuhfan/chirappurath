@@ -393,7 +393,7 @@ a {
   font-family: 'Noto Serif Malayalam', serif;
 }
 
-/* ===== PREMIUM BRANCH CARDS ===== */
+/* ===== BRANCHES SECTION ===== */
 
 .branch-card-premium {
   background: #fff;
@@ -427,6 +427,62 @@ a {
 
 .branch-card-premium:hover::before {
   opacity: 1;
+}
+
+/* New branch structure */
+.branch-main-heading {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4af37;
+  text-align: center;
+}
+
+.branch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.branch-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-left: 3px solid #d4af37;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.branch-item:hover {
+  background: #fdfaf6;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.branch-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #d4af37;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.branch-name {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  font-weight: 500;
 }
 
 .navbar-toggler {
@@ -586,12 +642,15 @@ a {
   overflow: hidden;
   position: relative;
   background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .father-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: transform 0.6s ease;
 }
 
@@ -676,7 +735,7 @@ a {
   }
 
   .father-image {
-    height: 250px;
+    height: 300px;
   }
 
   .father-card {
@@ -691,5 +750,25 @@ a {
 
   .fathers-intro {
     font-size: 16px;
+  }
+
+  .branch-main-heading {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .branch-item {
+    padding: 12px;
+  }
+
+  .branch-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .branch-name {
+    font-size: 15px;
   }
 }

@@ -68,7 +68,7 @@
           </div>
           <div class="father-details">
             <div class="father-name">Rev. Fr. Jacob Thomas</div>
-            <div class="father-info">തണങ്ങുംപതിക്കൽ</div>
+            <div class="father-info">തണുങ്ങുംപതിയ്ക്കൽ</div>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
           </div>
           <div class="father-details">
             <div class="father-name">Rev. Fr. Binu Joseph</div>
-            <div class="father-info">തണങ്ങുംപതിക്കൽ</div>
+            <div class="father-info">തണുങ്ങുംപതിയ്ക്കൽ</div>
           </div>
         </div>
       </div>
@@ -112,23 +112,49 @@
     <div class="about-divider"></div>
 
     <div class="row">
+      <!-- കുഴിമറ്റം ശാഖ -->
+      <div class="col-lg-6">
+        <div class="branch-main-heading">കുഴിമറ്റം ശാഖ</div>
+        <div class="branch-list">
+          <% const kuzhimattamBranches = [
+            "നടുവിലേടം",
+            "കാരണിക്കുളം",
+            "കിഴക്കേക്കുറ്റ്",
+            "ചേലചിറ",
+            "വല്യവീട്ടിൽ"
+          ]; %>
 
-      <% const branches = [
-        "നടുവിലേടം","കാരണിക്കുളം","കിഴക്കേക്കുറ്റ്","ചേലചിറ",
-        "വല്യവീട്ടിൽ","തണുങ്ങുംപതിയ്ക്കൽ","കിഴക്കേമുറി","ചിറത്തലയ്ക്കൽ",
-        "മറ്റത്തിൽ","തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)",
-        "തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)","ചിറപ്പുറത്ത്"
-      ]; %>
+          <% kuzhimattamBranches.forEach((name, index) => { %>
+            <div class="branch-item">
+              <span class="branch-number"><%= index + 1 %></span>
+              <span class="branch-name"><%= name %></span>
+            </div>
+          <% }) %>
+        </div>
+      </div>
 
-      <% branches.forEach(name => { %>
-        <div class="col-md-3 col-sm-6 mb-4">
-  <div class="branch-card-premium">
-    <span><%= name %></span>
-  </div>
-</div>
+      <!-- തോട്ടയ്ക്കാട് ശാഖ -->
+      <div class="col-lg-6">
+        <div class="branch-main-heading">തോട്ടയ്ക്കാട് ശാഖ</div>
+        <div class="branch-list">
+          <% const thotaykkadBranches = [
+            "തണുങ്ങുംപതിയ്ക്കൽ",
+            "കിഴക്കേമുറി",
+            "ചിറത്തലയ്ക്കൽ",
+            "മറ്റത്തിൽ",
+            "തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)",
+            "തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)",
+            "ചിറപ്പുറത്ത്"
+          ]; %>
 
-      <% }) %>
-
+          <% thotaykkadBranches.forEach((name, index) => { %>
+            <div class="branch-item">
+              <span class="branch-number"><%= index + 6 %></span>
+              <span class="branch-name"><%= name %></span>
+            </div>
+          <% }) %>
+        </div>
+      </div>
     </div>
   </div>
 </section>
