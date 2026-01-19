@@ -56,6 +56,119 @@ app.use(session({
 app.use('/', require('./routes/public'));
 app.use('/admin', require('./routes/admin'));
 
+// ===== TRANSLATION ENDPOINTS =====
+// These endpoints translate content once and store in database
+// Translation is NOT done during page rendering (data must be pre-translated)
+// Uses LibreTranslate free API: https://libretranslate.com/translate
+
+const { translateToEnglish } = require('./utils/translate');
+const Gallery = require('./models/Gallery');
+const Branch = require('./models/Branch');
+
+// Translate gallery description and store in database
+// Usage: POST /api/translate-gallery
+// Body: { "galleryId": "ObjectId" }
+app.post('/api/translate-gallery', express.json(), async (req, res) => {
+  try {
+    const { galleryId } = req.body;
+    
+    if (!galleryId) {
+      return res.status(400).json({ error: 'Missing galleryId' });
+    }
+
+    // Find gallery by ID
+    const gallery = await Gallery.findById(galleryId);
+    if (!gallery) {
+      return res.status(404).json({ error: 'Gallery not found' });
+    }
+
+    // Check if already translated
+    if (gallery.description_en) {
+      console.log('[API] Gallery already has English translation');
+      return res.json({ 
+        success: true,
+        message: 'Already translated',
+        description_en: gallery.description_en 
+      });
+    }
+
+    // Translate and store
+    if (gallery.description_ml) {
+      console.log('[API] Translating gallery description...');
+      const translated = await translateToEnglish(gallery.description_ml);
+      gallery.description_en = translated;
+      await gallery.save();
+      
+      console.log('[API] Gallery translation saved to database');
+      res.json({ 
+        success: true,
+        message: 'Translated and stored',
+        description_en: translated 
+      });
+    } else {
+      res.json({ 
+        success: false,
+        message: 'No Malayalam description to translate'
+      });
+    }
+  } catch (error) {
+    console.error('[API] Gallery translation error:', error.message);
+    res.status(500).json({ error: 'Translation failed' });
+  }
+});
+
+// Translate branch name and store in database
+// Usage: POST /api/translate-branch
+// Body: { "branchId": "ObjectId" }
+app.post('/api/translate-branch', express.json(), async (req, res) => {
+  try {
+    const { branchId } = req.body;
+    
+    if (!branchId) {
+      return res.status(400).json({ error: 'Missing branchId' });
+    }
+
+    // Find branch by ID
+    const branch = await Branch.findById(branchId);
+    if (!branch) {
+      return res.status(404).json({ error: 'Branch not found' });
+    }
+
+    // Check if already translated
+    if (branch.name_en) {
+      console.log('[API] Branch already has English translation');
+      return res.json({ 
+        success: true,
+        message: 'Already translated',
+        name_en: branch.name_en 
+      });
+    }
+
+    // Translate and store
+    if (branch.name_ml) {
+      console.log('[API] Translating branch name...');
+      const translated = await translateToEnglish(branch.name_ml);
+      branch.name_en = translated;
+      await branch.save();
+      
+      console.log('[API] Branch translation saved to database');
+      res.json({ 
+        success: true,
+        message: 'Translated and stored',
+        name_en: translated 
+      });
+    } else {
+      res.json({ 
+        success: false,
+        message: 'No Malayalam name to translate'
+      });
+    }
+  } catch (error) {
+    console.error('[API] Branch translation error:', error.message);
+    res.status(500).json({ error: 'Translation failed' });
+  }
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).render('404');

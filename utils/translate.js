@@ -1,37 +1,69 @@
-// utils/translate.js
-const fetch = require('node-fetch');
-const fs = require('fs');
-const path = require('path');
+/**
+ * LibreTranslate Utility
+ * Translates Malayalam to English using LibreTranslate public API
+ * Uses Node.js built-in fetch (Node 18+)
+ */
 
-const CACHE_FILE = path.join(__dirname, '..', 'translations.json');
-let cache = {};
+const LIBRETRANSLATE_API = 'https://libretranslate.com/translate';
 
-// load cache if exists
-try {
-  if (fs.existsSync(CACHE_FILE)) {
-    cache = JSON.parse(fs.readFileSync(CACHE_FILE));
+/**
+ * Translate Malayalam text to English
+ * @param {string} text - Malayalam text to translate
+ * @returns {Promise<string>} - English translation or original text on error
+ */
+async function translateToEnglish(text) {
+  console.log('[TRANSLATE] Called with text length:', text ? text.length : 0);
+
+  // Return empty string if no text
+  if (!text || text.trim() === '') {
+    console.log('[TRANSLATE] Empty text, returning empty string');
+    return '';
   }
-} catch (e) {
-  console.warn('Translation cache load error', e);
-}
 
-async function translateToEN(text) {
-  if (!text) return '';
-  if (cache[text]) return cache[text];
+  // Return original if too long (API limitations)
+  if (text.length > 400) {
+    console.warn('[TRANSLATE] Text too long (>400 chars), returning original');
+    return text;
+  }
 
-  const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=ml&tl=en&dt=t&q=' + encodeURIComponent(text);
   try {
-    const res = await fetch(url);
-    const data = await res.json();
-    const translated = data[0].map(item => item[0]).join('');
-    cache[text] = translated;
-    // safe write
-    try { fs.writeFileSync(CACHE_FILE, JSON.stringify(cache), { encoding: 'utf8' }); } catch (e) {}
-    return translated;
-  } catch (err) {
-    console.error('Translate failed', err);
-    return text; // fallback to original
+    console.log('[TRANSLATE] Calling LibreTranslate API...');
+    
+    // Use Node.js built-in fetch (available in Node 18+)
+    const response = await fetch(LIBRETRANSLATE_API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        q: text,
+        source: 'ml',      // Malayalam
+        target: 'en'       // English
+      })
+    });
+
+    if (!response.ok) {
+      console.error('[TRANSLATE] API returned status:', response.status);
+      console.log('[TRANSLATE] Returning original text due to API error');
+      return text;
+    }
+
+    const data = await response.json();
+    
+    if (data.translatedText) {
+      console.log('[TRANSLATE] Translation successful');
+      return data.translatedText;
+    }
+
+    console.warn('[TRANSLATE] No translatedText in response:', data);
+    return text;
+  } catch (error) {
+    console.error('[TRANSLATE] Error:', error.message);
+    console.log('[TRANSLATE] Returning original text due to error');
+    return text;
   }
 }
 
-module.exports = translateToEN;
+module.exports = {
+  translateToEnglish
+};

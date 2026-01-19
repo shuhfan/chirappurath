@@ -17,6 +17,10 @@ const gallerySchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  description_en: {
+    type: String,
+    default: ''
+  },
   sortOrder: {
     type: Number,
     default: 0

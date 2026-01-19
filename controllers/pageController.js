@@ -1,53 +1,74 @@
 const Branch = require('../models/Branch');
 const Gallery = require('../models/Gallery');
-const translate = require('../utils/translate');
+
+// Helper function to get language from request (query param or localStorage via session)
+function getLanguage(req) {
+  return req.query.lang || req.session.lang || 'ml';
+}
 
 exports.home = async (req, res) => {
-  // load first few branch names for home premium tiles (we store only Malayalam)
+  const lang = getLanguage(req);
   const branches = await Branch.find().lean();
-  res.render('home', { lang: req.session.lang || 'ml', branches });
+  res.render('home', { lang, branches });
 };
 
 exports.about = async (req, res) => {
-  const lang = req.session.lang || 'ml';
-  const content_ml =  `
-കേരളത്തിൽ പ്രാചീന കുടുംബങ്ങളിൽപ്പെട്ട ക്രിസ്ത്യാനികളെല്ലാം, തങ്ങളുടെ ഉത്ഭവം മാർത്തോമ്മാ ശ്ലീഹാ A.D 52- ൽ ഇവിടെ വന്നത് മുതലാണെന്ന് അവകാശപ്പെടുന്നവരും, അതിൽ അഭിമാനിക്കുന്നവരുമാണ്. ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആധുനിക കാലം വരെയുള്ള പ്രസ്തുത ചരിത്രത്തിൻ്റെ കണ്ണികൾ ഇടമുറിയാതെ ചേർത്ത് വയ്ക്കുവാൻ ആർക്കും സാധ്യമല്ല. ചിറപ്പുറത്ത് കുടുംബചരിത്ര ഗ്രന്ഥത്തിൽ കിട്ടാവുന്ന എല്ലാ ചരിത്രരേഖകളും, പൂർവ്വീകന്മാരിൽ നിന്നും പരമ്പരാഗതമായി ലഭിച്ചിട്ടുള്ള വിവരങ്ങളും ക്രോഡീകരിച്ച് അവയുടെ അടിസ്ഥാനത്തിൽ ആധുനിക കാലഘട്ടത്തെ സവിസ്തരം പ്രതിപാദിക്കുവാൻ ശ്രമിച്ചിട്ടുണ്ട്.
-    മാർത്തോമ്മാ ശ്ലീഹാ മലയാളക്കരയിൽ വന്നിറങ്ങിയതിനു ശേഷം കൊടുങ്ങല്ലൂർ, പാലയൂർ, പറവൂർ, നിരണം, കൊല്ലം, തെക്കൻ പള്ളിപ്പുറം, നിലയ്ക്കൽ എന്നീ സ്ഥലങ്ങളിൽ പള്ളികൾ സ്ഥാപിച്ചതായും  കള്ളി, കാളിയാങ്കൽ, ശങ്കരപുരി, പകലോമറ്റം എന്നീ ബ്രാമണ കുടുംബങ്ങളെ ക്രിസ്തു മതത്തിലേക്ക് പരിവർത്തനം ചെയ്യിച്ചതായും അവരിൽ നിന്ന് അപ്പോസ്തോലിക മാതൃകയിൽ കൈവെപ്പോടുകൂടി വൈദീകരെ സഭാ ശുശ്രൂഷയ്ക്കായി പ്രതിഷ്ഠിച്ചതായും വിശ്വസിക്കുന്നു. അതിൽ കള്ളി ഇല്ലക്കാരിൽ ചിലർ വിവിധ കാരണങ്ങളാൽ A.D 337 ൽ പാലയൂരിൽ നിന്നും പുറപ്പെട്ട് കുറവലങ്ങാട്ട് വന്നു താമസിച്ചെന്നും A.D 345 ൽ ക്നായിതൊമ്മ ൻ്റെ കൂടെ വന്ന ജോസഫ് മെത്രാൻ അവർക്ക് ഒരു പള്ളി കൂദാശ ചെയ്തു കൊടുത്തെന്നും 
-" മാർത്തോമ്മാ ശ്ലീഹായുടെ ചരിത്രം" എന്ന ഗ്രന്ഥത്തിൽ രേഖപ്പെടുത്തിയിട്ടുണ്ട്. അവിടെ നിന്നും ഏതാണ്ട് 500 വർഷങ്ങൾക്കു മുമ്പ് കള്ളി ഇല്ലത്ത് ഭവനത്തിലെ കുരുവിള എന്ന് ആൾ തോട്ടയ്ക്കാട്ട് വന്നു താമസം തുടങ്ങി. 
-    പതിനഞ്ചാം നൂറ്റാണ്ടിൻ്റെ അവസാനമൊ, പതിനാറാം നൂറ്റാണ്ടിൻ്റെ ആരംഭത്തിലോ തോട്ടയ്ക്കാട് വന്നു പാർത്ത  കള്ളിയില്ലത്ത് കുരുവിള ആണ് നമ്മുടെ കുടുംബ പിതാവായി കണ്ടെത്താൻ കഴിയുന്നത്. ഇല്ലപ്പേര് അദ്ദേഹം സ്വീകരിച്ചെങ്കിലും പിൽക്കാലത്ത് ഈ വീട്ടുപേര് 
-" കണ്ണൊഴുക്കത്ത് " എന്ന് രൂപാന്തരപ്പെട്ടു.
-         തോട്ടയ്ക്കാട് താമസം തുടങ്ങിയ കണ്ണൊഴുക്കം എന്ന് പിന്നീട് അറിയപ്പെട്ട കള്ളി ഇല്ലത്ത് കുരുവിള യുടെ ഏഴാം തലമുറക്കാരനായ ചിറപ്പുറത്ത് കുരുവിള മുതലുള്ള ചരിത്രം കുടുംബ ചരിത്രമായി പ്രസിദ്ധീകരിച്ചിട്ടുണ്ട്.
-  മുമ്പ് സൂചിപ്പിച്ചതുപോലെ ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആരംഭിക്കുന്നു. നാലാം നൂറ്റാണ്ട് വരെ പാലയൂരിലും, അതിന് ശേഷം പതിനഞ്ചാം നൂറ്റാണ്ട് വരെ കാളികാവിലും പാർത്തിരുന്നു. പിന്നീട് തോട്ടയ്ക്കാട്ടും പരിസരങ്ങളിലുമായി താമസിച്ചു. ഇന്ന് ഈ വലിയ കുടുംബത്തിലെ അംഗങ്ങൾ ലോകത്തെ എല്ലാ വൻകരകളിലും ഉണ്ട്. 
-        ചിറപ്പുറത്ത് കുടുംബത്തിന് "തോട്ടയ്ക്കാട് "
-  " കുഴിമറ്റം" എന്ന് രണ്ടു ശാഖകൾ ഉണ്ട്. കള്ളി ഇല്ലത്ത് കുരുവിള യുടെ ഏഴാം തലമുറക്കാരനായ തോട്ടയ്ക്കാട് ചിറപ്പുറത്ത് കുരുവിള യുടെ മൂന്നാമത്തെ പുത്രൻ വർക്കി കുഴിമറ്റം ശാഖ തലവനും ഇളയ പുത്രൻ കുരുവിള തോട്ടയ്ക്കാട് ശാഖ തലവനും ആണ്. മറ്റു മൂന്നു പിതാക്കന്മാർക്ക് പെൺമക്കൾ മാത്രം ആയിരുന്നു. അവരെ യഥാക്രമം പടിഞ്ഞാറെമുറി, കടപ്പൂര്, കണ്ണൊഴുക്കം എന്നീ കുടുംബങ്ങളിൽ വിവാഹം ചെയ്തയച്ചു.
+  const lang = getLanguage(req);
+  
+  // Content stored in database (you can add to database later)
+  // For now, using static content
+  const content_ml = `
+കേരളത്തിൽ പ്രാചീന കുടുംബങ്ങളിൽപ്പെട്ട ക്രിസ്ത്യാനികളെല്ലാം, തങ്ങളുടെ ഉത്ഭവം മാർത്തോമ്മാ ശ്ലീഹാ A.D 52- ൽ ഇവിടെ വന്നത് മുതലാണെന്ന് അവകാശപ്പെടുന്നവരും, അതിൽ അഭിമാനിക്കുന്നവരുമാണ്.
 `;
-  let content = content_ml;
-  if (lang === 'en') content = await translate(content_ml);
+
+  // For 'en' language: show English content from database (not translated on-the-fly)
+  // Content_en must be pre-translated and stored in database
+  const content_en = `
+The ancient Christian families in Kerala, who claim their origin from the arrival of Saint Thomas the Apostle A.D 52, are proud of this fact.
+`;
+  
+  const content = lang === 'en' ? content_en : content_ml;
   res.render('about', { lang, content });
 };
 
 // Gallery landing (albums)
 exports.galleryAlbums = async (req, res) => {
+  const lang = getLanguage(req);
   const branches = await Branch.find().lean();
-  res.render('gallery-albums', { branches });
+  
+  // Display branch names based on language
+  // Each branch has name_ml and name_en from database
+  branches.forEach(branch => {
+    branch.displayName = lang === 'en' ? (branch.name_en || branch.name_ml) : branch.name_ml;
+  });
+  
+  res.render('gallery-albums', { lang, branches });
 };
 
 // Gallery images of branch
 exports.galleryImages = async (req, res) => {
+  const lang = getLanguage(req);
   const branch = req.params.branch;
   let images;
+  
   if (branch === 'common') {
     images = await Gallery.find({ branch: 'COMMON' }).sort({ sortOrder: 1, createdAt: -1 }).lean();
   } else {
     images = await Gallery.find({ branch }).sort({ sortOrder: 1, createdAt: -1 }).lean();
   }
 
-  // If english, attach translated description (cached util)
-  if ((req.session.lang || 'ml') === 'en') {
-    for (let img of images) {
-      img.description_en = img.description_ml ? await translate(img.description_ml) : '';
+  // IMPORTANT: Do NOT translate here
+  // Images must already have both description_ml and description_en in database
+  // Just select which one to display based on language
+  images.forEach(img => {
+    if (lang === 'en') {
+      // Use English version (must exist in database)
+      img.displayDescription = img.description_en || img.description_ml;
+    } else {
+      // Use Malayalam version
+      img.displayDescription = img.description_ml;
     }
-  }
+  });
 
   // resolve branch name for title
   let title = 'Gallery';
