@@ -17,6 +17,9 @@
 
   <!-- Gallery -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Custom -->
   <link rel="stylesheet" href="/css/style.css">
@@ -25,7 +28,7 @@
 
 <nav class="navbar navbar-expand-lg premium-nav fixed-top">
   <div class="container-fluid px-3 px-lg-5">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/">
       <img src="/images/logo.png" alt="Chirappurath Family" class="nav-logo">
     </a>
 
@@ -36,14 +39,14 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto gap-1 pb-3">
         <!-- Home -->
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         
         <!-- About Family -->
         <li class="nav-item dropdown">
           <a class="nav-link " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Family</a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="#">History</a></li>
-            <li><a class="dropdown-item" href="#">Priest</a></li>
+            <li><a class="dropdown-item" href="/about">History</a></li>
+            <li><a class="dropdown-item" href="/priest">Priest</a></li>
             <li><a class="dropdown-item" href="#">Committee Member</a></li>
           </ul>
         </li>
@@ -52,21 +55,25 @@
         <li class="nav-item dropdown">
           <a class="nav-link " href="#" id="branchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Branches</a>
           <ul class="dropdown-menu" aria-labelledby="branchesDropdown">
-            <li><a class="dropdown-header">കുഴിമറ്റം ശാഖ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">നടുവിലേടം</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചേലചിറ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">കുഴിമറ്റം ശാഖ</a></li>
+            <li class="submenu-items">
+              <a class="dropdown-item ps-4" href="#">നടുവിലേടം</a>
+              <a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a>
+              <a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a>
+              <a class="dropdown-item ps-4" href="#">ചേലചിറ</a>
+              <a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a>
+            </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-header">തോട്ടയ്ക്കാട് ശാഖ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">തോട്ടയ്ക്കാട് ശാഖ</a></li>
+            <li class="submenu-items">
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a>
+              <a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a>
+              <a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a>
+              <a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a>
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a>
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a>
+              <a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a>
+            </li>
           </ul>
         </li>
 
@@ -80,23 +87,27 @@
         <li class="nav-item dropdown">
           <a class="nav-link " href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
           <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
-            <li><a class="dropdown-header">കുഴിമറ്റം ശാഖ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">നടുവിലേടം</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചേലചിറ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">കുഴിമറ്റം ശാഖ</a></li>
+            <li class="submenu-items">
+              <a class="dropdown-item ps-4" href="#">നടുവിലേടം</a>
+              <a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a>
+              <a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a>
+              <a class="dropdown-item ps-4" href="#">ചേലചിറ</a>
+              <a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a>
+            </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-header">തോട്ടയ്ക്കാട് ശാഖ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a></li>
-            <li><a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a></li>
-            <li><a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">തോട്ടയ്ക്കാട് ശാഖ</a></li>
+            <li class="submenu-items">
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a>
+              <a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a>
+              <a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a>
+              <a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a>
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a>
+              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a>
+              <a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a>
+            </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-header" href="#">Pastors</a></li>
+            <li><a class="dropdown-item" href="/pastors"><b>Pastors</b></a></li>
           </ul>
         </li>
 
@@ -133,10 +144,74 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container text-center">
-    <p class="footer-title">Chirappurath Family</p>
-    <p class="footer-sub">Faith • Tradition • Legacy</p>
-    <small>© All Rights Reserved</small>
+  <div class="container">
+    <div class="footer-content">
+      <!-- Left Section: Logo & Social -->
+      <div class="footer-section footer-logo-section">
+        <img src="/images/logo.png" alt="Chirappurath Family" class="footer-logo">
+        <h3 class="footer-church-name">ചിറപ്പുറത്ത് കുടുംബം</h3>
+        <!-- <p class="footer-address">തോട്ടയ്ക്കാട് മോട്ടലൈൻ - 2<br>Reg.No. A 57/84</p> -->
+        <div class="footer-social">
+          <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Section: Links -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Family</a></li>
+          <li><a href="/directory">Directory</a></li>
+          <li><a href="/family-tree">Family Tree</a></li>
+          <li><a href="/news">News/Events</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Branches Section: കുഴിമറ്റം ശാഖ -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">കുഴിമറ്റം ശാഖ</h4>
+        <ul class="footer-links">
+          <li><a href="/branches/kuzhimattam/naduvileddam">നടുവിലേടം</a></li>
+          <li><a href="/branches/kuzhimattam/karanikulam">കാരണിക്കുളം</a></li>
+          <li><a href="/branches/kuzhimattam/kizhakkekkurt">കിഴക്കേക്കുറ്റ്</a></li>
+          <li><a href="/branches/kuzhimattam/chelachira">ചേലചിറ</a></li>
+          <li><a href="/branches/kuzhimattam/valyavettil">വല്യവീട്ടിൽ</a></li>
+        </ul>
+      </div>
+
+      <!-- Branches Section: തോട്ടയ്ക്കാട് ശാഖ -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">തോട്ടയ്ക്കാട് ശാഖ</h4>
+        <ul class="footer-links">
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol">തണുങ്ങുംപതിയ്ക്കൽ</a></li>
+          <li><a href="/branches/thotaykkad/kizhakkemurei">കിഴക്കേമുറി</a></li>
+          <li><a href="/branches/thotaykkad/chirathalaykkol">ചിറത്തലയ്ക്കൽ</a></li>
+          <li><a href="/branches/thotaykkad/mattathil">മറ്റത്തിൽ</a></li>
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-east">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a></li>
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-west">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a></li>
+          <li><a href="/branches/thotaykkad/chirapputath">ചിറപ്പുറത്ത്</a></li>
+        </ul>
+      </div>
+
+      <!-- Gallery & Updates Section -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">Gallery & Updates</h4>
+        <ul class="footer-links">
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/news/albums">Albums</a></li>
+          <li><a href="/news/videos">Videos</a></li>
+          <li><a href="/news/obituary">Obituary</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p class="footer-credit">Designed by <a href="https://keraladigitalpark.com" class="credit-link">Kerala Digital Park</a></p>
+    </div>
   </div>
 </footer>
 
@@ -144,6 +219,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   GLightbox();
+
+  // Submenu toggle function
+  function toggleSubmenu(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const header = event.target;
+    const submenu = header.parentElement.nextElementSibling;
+    
+    if (submenu && submenu.classList.contains('submenu-items')) {
+      submenu.classList.toggle('active');
+      header.classList.toggle('active');
+    }
+  }
 
   // Simple language toggle
   // let currentLanguage = localStorage.getItem('selectedLanguage') || 'ml';

@@ -10,6 +10,8 @@ router.get('/lang/:type', (req,res)=>{
 
 router.get('/', pageController.home);
 router.get('/about', pageController.about);
+router.get('/priest', pageController.priest);
+router.get('/pastors', pageController.pastors);
 
 // gallery
 router.get('/gallery', pageController.galleryAlbums);

@@ -263,20 +263,202 @@ a {
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: #1f1f1f;
-  color: #ccc;
-  padding: 50px 0;
+  background: linear-gradient(to bottom, #ffffff, #f9f8f6);
+  color: #333;
+  padding: 60px 0 30px;
   margin-top: 100px;
+  border-top: 2px solid rgba(212,175,55,0.3);
 }
 
-.footer-title {
-  font-size: 22px;
-  color: #fff;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
-.footer-sub {
-  font-size: 14px;
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.footer-church-name {
+  font-family: 'Noto Serif Malayalam', serif;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.footer-address {
+  font-size: 12px;
+  color: rgba(26,26,26,0.7);
+  line-height: 1.6;
+  margin: 10px 0 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(212,175,55,0.5);
+  border-radius: 50%;
   color: #d4af37;
+  text-decoration: none;
+  transition: all 250ms ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background: #d4af37;
+  color: #fff;
+  border-color: #d4af37;
+  transform: scale(1.1);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section-title {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(26,26,26,0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 250ms ease;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(212,175,55,0.2);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-credit {
+  font-size: 12px;
+  color: rgba(26,26,26,0.6);
+  margin: 0;
+}
+
+.credit-link {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== MARQUEE SECTION ===== */
+.marquee-section {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a43a 100%);
+  padding: 20px 0;
+  margin: 60px 0;
+  overflow: hidden;
+}
+
+.marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-content span {
+  display: inline-block;
+  margin-right: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 1400px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .marquee-content span {
+    font-size: 14px;
+    margin-right: 30px;
+  }
+
+  .footer-section-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
 }
 
 /* ===== PREMIUM NAVBAR ===== */
@@ -385,6 +567,39 @@ a {
   .navbar-nav .dropdown-menu .dropdown-divider {
     margin: 8px 0;
     border-color: rgba(212,175,55,0.2);
+  }
+
+  /* Submenu items hidden by default */
+  .navbar-nav .dropdown-menu .submenu-items {
+    display: none;
+    transition: all 250ms ease;
+  }
+
+  /* Show submenu items when active */
+  .navbar-nav .dropdown-menu .submenu-items.active {
+    display: block;
+  }
+
+  /* Submenu header clickable styling */
+  .navbar-nav .dropdown-menu .submenu-header {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 30px;
+  }
+
+  .navbar-nav .dropdown-menu .submenu-header::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+    transition: transform 250ms ease;
+    color: rgba(212,175,55,0.6);
+  }
+
+  .navbar-nav .dropdown-menu .submenu-header.active::after {
+    transform: rotate(-180deg);
+    color: #d4af37;
   }
 
   /* Show dropdown on hover - keep visible while hovering parent or dropdown */

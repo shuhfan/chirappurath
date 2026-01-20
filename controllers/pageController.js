@@ -14,21 +14,7 @@ exports.home = async (req, res) => {
 
 exports.about = async (req, res) => {
   const lang = getLanguage(req);
-  
-  // Content stored in database (you can add to database later)
-  // For now, using static content
-  const content_ml = `
-കേരളത്തിൽ പ്രാചീന കുടുംബങ്ങളിൽപ്പെട്ട ക്രിസ്ത്യാനികളെല്ലാം, തങ്ങളുടെ ഉത്ഭവം മാർത്തോമ്മാ ശ്ലീഹാ A.D 52- ൽ ഇവിടെ വന്നത് മുതലാണെന്ന് അവകാശപ്പെടുന്നവരും, അതിൽ അഭിമാനിക്കുന്നവരുമാണ്.
-`;
-
-  // For 'en' language: show English content from database (not translated on-the-fly)
-  // Content_en must be pre-translated and stored in database
-  const content_en = `
-The ancient Christian families in Kerala, who claim their origin from the arrival of Saint Thomas the Apostle A.D 52, are proud of this fact.
-`;
-  
-  const content = lang === 'en' ? content_en : content_ml;
-  res.render('about', { lang, content });
+  res.render('about', { lang });
 };
 
 // Gallery landing (albums)
@@ -78,4 +64,15 @@ exports.galleryImages = async (req, res) => {
   } else title = 'Common Gallery';
 
   res.render('gallery-images', { images, title, lang: req.session.lang || 'ml' });
+};
+
+// Priest page
+exports.priest = async (req, res) => {
+  const lang = getLanguage(req);
+  res.render('priest', { lang });
+};
+// Pastors page
+exports.pastors = async (req, res) => {
+  const lang = getLanguage(req);
+  res.render('pastors', { lang });
 };
