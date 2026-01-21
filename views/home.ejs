@@ -1,14 +1,38 @@
 ﻿<div id="ribbonOverlay">
-  <div class="overlay-content">
+  <div class="inauguration-container">
 
-    <div class="fullscreen-ribbon">
-      <div class="ribbon-half left"></div>
-      <div class="ribbon-half right"></div>
+    <!-- Elegant Curtains -->
+    <div class="curtain-wrapper">
+      <div class="curtain curtain-left"></div>
+      <div class="curtain curtain-right"></div>
     </div>
 
-    <button class="btn-heritage mt-4" onclick="cutRibbon()">
-      Inaugurate
-    </button>
+    <!-- Center Content -->
+    <div class="inauguration-content">
+
+      <!-- Family Logo -->
+      <div class="inauguration-logo">
+        <img src="/images/logo.png" alt="Chirappurath Family">
+      </div>
+
+      <!-- Title -->
+      <h1 class="inauguration-title">CHIRAPPURATH FAMILY</h1>
+
+      <!-- Decorative Line -->
+      <div class="inauguration-divider">
+        <span class="divider-ornament">✦</span>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="inauguration-subtitle">90 Years of Heritage • Since 1936</p>
+
+      <!-- Inaugurate Button -->
+      <button class="btn-inaugurate" onclick="inaugurateWebsite()">
+        <span class="btn-text">Inaugurate</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+    </div>
 
   </div>
 </div>
@@ -174,32 +198,53 @@
 
 <script>
 (function () {
-  // If already inaugurated, hide overlay
+  // If already inaugurated, hide overlay and allow scrolling
   if (localStorage.getItem("inaugurated") === "true") {
     const overlay = document.getElementById("ribbonOverlay");
     if (overlay) overlay.remove();
+  } else {
+    // Lock body scroll when inauguration overlay is visible
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
   }
 })();
 
-function cutRibbon() {
-  document.querySelector(".fullscreen-ribbon").classList.add("cut");
+function inaugurateWebsite() {
+  // Add opening class to curtains
+  document.querySelector(".curtain-wrapper").classList.add("opening");
 
-  // Confetti
-  let end = Date.now() + 2500;
-  (function frame() {
-    confetti({
-      particleCount: 8,
-      spread: 100,
-      origin: { y: 0.6 }
-    });
-    if (Date.now() < end) requestAnimationFrame(frame);
-  })();
+  // Fade out the content
+  document.querySelector(".inauguration-content").style.opacity = "0";
+
+  // Confetti celebration
+  setTimeout(() => {
+    let end = Date.now() + 3000;
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.6 }
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.6 }
+      });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    })();
+  }, 600);
 
   // Save state & remove overlay
   setTimeout(() => {
     localStorage.setItem("inaugurated", "true");
     document.getElementById("ribbonOverlay").remove();
-  }, 1200);
+
+    // Unlock body scroll after inauguration
+    document.body.style.overflow = "auto";
+    document.body.style.height = "auto";
+  }, 1800);
 }
 </script>
 
