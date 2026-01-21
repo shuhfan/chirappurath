@@ -1,0 +1,112 @@
+<%- include('header') %>
+
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Edit News</h2>
+    <a href="/admin/news" class="btn btn-secondary">Back to List</a>
+  </div>
+
+  <form action="/admin/news/edit/<%= news._id %>" method="POST">
+    <div class="card">
+      <div class="card-body">
+
+        <!-- Malayalam Fields -->
+        <h5 class="card-title mb-3">Malayalam Content</h5>
+
+        <div class="mb-3">
+          <label for="title_ml" class="form-label">Title (Malayalam) *</label>
+          <input type="text" class="form-control" id="title_ml" name="title_ml" value="<%= news.title_ml %>" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="excerpt_ml" class="form-label">Excerpt (Malayalam) *</label>
+          <textarea class="form-control" id="excerpt_ml" name="excerpt_ml" rows="2" required><%= news.excerpt_ml %></textarea>
+          <small class="form-text text-muted">Short summary (max 150 characters)</small>
+        </div>
+
+        <div class="mb-3">
+          <label for="content_ml" class="form-label">Content (Malayalam) *</label>
+          <textarea class="form-control" id="content_ml" name="content_ml" rows="10" required><%= news.content_ml %></textarea>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- English Fields -->
+        <h5 class="card-title mb-3">English Content (Optional)</h5>
+
+        <div class="mb-3">
+          <label for="title_en" class="form-label">Title (English)</label>
+          <input type="text" class="form-control" id="title_en" name="title_en" value="<%= news.title_en || '' %>">
+        </div>
+
+        <div class="mb-3">
+          <label for="excerpt_en" class="form-label">Excerpt (English)</label>
+          <textarea class="form-control" id="excerpt_en" name="excerpt_en" rows="2"><%= news.excerpt_en || '' %></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="content_en" class="form-label">Content (English)</label>
+          <textarea class="form-control" id="content_en" name="content_en" rows="10"><%= news.content_en || '' %></textarea>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Meta Fields -->
+        <h5 class="card-title mb-3">Settings</h5>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="category" class="form-label">Category *</label>
+            <select class="form-control" id="category" name="category" required>
+              <option value="news" <%= news.category === 'news' ? 'selected' : '' %>>News</option>
+              <option value="event" <%= news.category === 'event' ? 'selected' : '' %>>Event</option>
+              <option value="announcement" <%= news.category === 'announcement' ? 'selected' : '' %>>Announcement</option>
+              <option value="obituary" <%= news.category === 'obituary' ? 'selected' : '' %>>Obituary</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="status" class="form-label">Status *</label>
+            <select class="form-control" id="status" name="status" required>
+              <option value="published" <%= news.status === 'published' ? 'selected' : '' %>>Published</option>
+              <option value="draft" <%= news.status === 'draft' ? 'selected' : '' %>>Draft</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="date" class="form-label">Publish Date *</label>
+            <input type="date" class="form-control" id="date" name="date" value="<%= new Date(news.date).toISOString().split('T')[0] %>" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="eventDate" class="form-label">Event Date (Optional)</label>
+            <input type="date" class="form-control" id="eventDate" name="eventDate" value="<%= news.eventDate ? new Date(news.eventDate).toISOString().split('T')[0] : '' %>">
+            <small class="form-text text-muted">For events only</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image URL (Optional)</label>
+          <input type="text" class="form-control" id="image" name="image" value="<%= news.image || '' %>" placeholder="/images/news/example.jpg">
+          <small class="form-text text-muted">Upload image to /public/images/news/ folder first</small>
+        </div>
+
+        <% if (news.image) { %>
+          <div class="mb-3">
+            <img src="<%= news.image %>" alt="Preview" style="max-width: 300px; border: 1px solid #ddd; border-radius: 4px;">
+          </div>
+        <% } %>
+
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Update News</button>
+          <a href="/admin/news" class="btn btn-secondary">Cancel</a>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- include('footer') %>

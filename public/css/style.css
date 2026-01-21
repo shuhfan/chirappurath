@@ -7,6 +7,11 @@ body {
   color: #2c2c2c;
 }
 
+main {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,6 +26,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 .hero-box {
@@ -291,7 +297,7 @@ a {
 }
 
 .footer-church-name {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: Arial, sans-serif;
   color: #1a1a1a;
   font-size: 16px;
   font-weight: 600;
@@ -343,6 +349,7 @@ a {
   font-size: 16px;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
 }
 
 .footer-links {
@@ -360,6 +367,7 @@ a {
   text-decoration: none;
   font-size: 14px;
   transition: all 250ms ease;
+  font-family: Arial, sans-serif;
 }
 
 .footer-links a:hover {
@@ -377,6 +385,7 @@ a {
   font-size: 12px;
   color: rgba(26,26,26,0.6);
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .credit-link {
@@ -469,13 +478,51 @@ a {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: relative;
   z-index: 1029;
+  margin-bottom: 0;
 }
 
 .header-logo-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   min-height: 70px;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  color: #d4af37;
+  background: rgba(212,175,55,0.1);
+}
+
+.lang-btn.active {
+  color: #fff;
+  background: #d4af37;
+  font-weight: 600;
+}
+
+.lang-divider {
+  color: #ccc;
+  font-size: 14px;
 }
 
 /* ===== PREMIUM NAVBAR ===== */
@@ -486,6 +533,7 @@ a {
   border-bottom: none;
   backdrop-filter: blur(10px);
   padding: 12px 0;
+  margin-top: 0;
   position: sticky;
   z-index: 1030;
   top: 0;
@@ -523,6 +571,10 @@ a {
   height: 2px;
   background: #fff;
   transition: width 250ms ease;
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: none !important;
 }
 
 .navbar-nav .nav-link:hover {
@@ -756,12 +808,13 @@ a {
 }
 
 @media (max-width: 991px) {
-  
+
   .navbar-collapse {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(40px);
     padding: 20px 0;
     border-radius: 0;
-    margin-top: 0;
+    margin-top: -31px;
     border: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border-top: 1px solid rgba(212,175,55,0.2);
@@ -776,11 +829,11 @@ a {
   }
 
   .navbar-nav { width: 100%; }
-  .navbar-nav .nav-link { 
-    padding: 12px 15px; 
+  .navbar-nav .nav-link {
+    padding: 12px 15px;
     margin-left: 0;
     margin-right: 0;
-    color: rgba(26,26,26,0.8); 
+    color: rgba(26,26,26,0.8);
     font-size: 15px;
     border-bottom: 1px solid rgba(20,20,20,0.1);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -955,6 +1008,28 @@ a {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(26,26,26,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Position toggler on right for mobile */
+@media (max-width: 991px) {
+  .premium-nav {
+    display: block !important;
+    min-height: 50px;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1051;
+    display: block !important;
+  }
+
+  .premium-nav .container-fluid {
+    position: relative;
+    min-height: 50px;
+  }
 }
 
 /* ===== REAL FABRIC RIBBON ===== */
@@ -1194,6 +1269,112 @@ a {
   margin-bottom: 0;
 }
 
+/* ===== NEWS SIDEBAR ===== */
+
+.news-sidebar {
+  background: #fff;
+  border: 1px solid #e6d9c3;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 120px;
+}
+
+.news-sidebar-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4af37;
+  text-align: center;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.news-link:hover {
+  transform: translateX(3px);
+}
+
+.news-item-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.news-link:hover .news-item-title {
+  color: #d4af37;
+}
+
+.news-item-date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.news-item-excerpt {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-read-more {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 13px;
+  color: #d4af37;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.news-link:hover .news-read-more {
+  color: #c9a43a;
+  text-decoration: underline;
+}
+
+.no-news {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-news p {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  color: #999;
+}
+
 @media (max-width: 768px) {
   .fathers-heading, .history-title {
     font-size: 32px;
@@ -1238,8 +1419,6 @@ a {
     font-size: 15px;
   }
 
-  
-
   .header-logo-wrapper {
     min-height: 50px;
   }
@@ -1255,5 +1434,18 @@ a {
   .navbar-nav .nav-link {
     font-size: 14px;
     margin-right: 6px;
+  }
+
+  .news-sidebar {
+    margin-top: 40px;
+    position: static;
+  }
+
+  .news-sidebar-title {
+    font-size: 20px;
+  }
+
+  .news-item-title {
+    font-size: 15px;
   }
 }

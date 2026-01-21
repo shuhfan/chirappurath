@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const galleryController = require('../controllers/galleryController');
+const newsController = require('../controllers/newsController');
 
 const isAdmin = (req, res, next) => {
   if (req.session && req.session.admin === true) {
@@ -37,5 +38,13 @@ router.post('/gallery/edit/:id', isAdmin, galleryController.editImage);
 router.post('/gallery/delete/:id', isAdmin, galleryController.deleteImage);
 
 router.get('/reset-inaug', isAdmin, galleryController.resetInaug);
+
+// News routes
+router.get('/news', isAdmin, newsController.adminNewsList);
+router.get('/news/add', isAdmin, newsController.adminAddNewsForm);
+router.post('/news/add', isAdmin, newsController.adminCreateNews);
+router.get('/news/edit/:id', isAdmin, newsController.adminEditNewsForm);
+router.post('/news/edit/:id', isAdmin, newsController.adminUpdateNews);
+router.post('/news/delete/:id', isAdmin, newsController.adminDeleteNews);
 
 module.exports = router;

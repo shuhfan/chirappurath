@@ -1,0 +1,204 @@
+<section class="hero">
+  <div class="hero-box"></div>
+</section>
+
+<section class="gallery-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Back Button -->
+        <div class="mb-4">
+          <a href="/news" class="btn btn-outline-gold btn-sm">
+            <i class="fas fa-arrow-left"></i> മടങ്ങുക
+          </a>
+        </div>
+
+        <!-- News Article -->
+        <article class="news-article">
+
+          <!-- Meta Info -->
+          <div class="news-meta">
+            <span class="news-date">
+              <%= new Date(news.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }) %>
+            </span>
+            <span class="news-category <%= news.category %>">
+              <%= news.category === 'news' ? 'വാർത്ത' : news.category === 'event' ? 'പരിപാടി' : news.category === 'announcement' ? 'അറിയിപ്പ്' : news.category %>
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="news-article-title">
+            <%= lang === 'en' ? (news.title_en || news.title_ml) : news.title_ml %>
+          </h1>
+
+          <!-- Featured Image -->
+          <% if (news.image) { %>
+            <div class="news-featured-image">
+              <img src="<%= news.image %>" alt="<%= lang === 'en' ? (news.title_en || news.title_ml) : news.title_ml %>">
+            </div>
+          <% } %>
+
+          <!-- Content -->
+          <div class="news-content">
+            <%= lang === 'en' ? (news.content_en || news.content_ml) : news.content_ml %>
+          </div>
+
+          <!-- Event Date if exists -->
+          <% if (news.eventDate) { %>
+            <div class="event-date-box">
+              <i class="fas fa-calendar-alt"></i>
+              <strong>പരിപാടി തീയതി:</strong>
+              <%= new Date(news.eventDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }) %>
+            </div>
+          <% } %>
+
+        </article>
+
+        <!-- Share Buttons -->
+        <div class="share-section mt-5">
+          <h4 class="share-title">പങ്കുവയ്ക്കുക</h4>
+          <div class="share-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent('https://' + req.get('host') + req.originalUrl) %>" target="_blank" class="btn btn-outline-gold btn-sm">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://wa.me/?text=<%= encodeURIComponent((lang === 'en' ? (news.title_en || news.title_ml) : news.title_ml) + ' - https://' + req.get('host') + req.originalUrl) %>" target="_blank" class="btn btn-outline-gold btn-sm">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.news-article {
+  background: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #e6d9c3;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #999;
+  font-family: 'Playfair Display', serif;
+}
+
+.news-category {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-family: 'Noto Serif Malayalam', serif;
+  background: rgba(212,175,55,0.15);
+  color: #c9a43a;
+}
+
+.news-article-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.news-featured-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background: #e0e0e0;
+}
+
+.news-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 18px;
+  color: #333;
+  line-height: 2;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+.event-date-box {
+  background: rgba(212,175,55,0.1);
+  border-left: 4px solid #d4af37;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 4px;
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 16px;
+}
+
+.event-date-box i {
+  color: #d4af37;
+  margin-right: 8px;
+}
+
+.share-section {
+  text-align: center;
+  padding: 30px;
+  background: #fdfaf6;
+  border-radius: 8px;
+}
+
+.share-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-buttons .btn i {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .news-article {
+    padding: 25px;
+  }
+
+  .news-article-title {
+    font-size: 24px;
+  }
+
+  .news-content {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .news-featured-image {
+    height: 250px;
+  }
+}
+</style>

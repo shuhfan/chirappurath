@@ -27,7 +27,7 @@
 
     <!-- SUB TITLE -->
     <div class="hero-sub">
-      വിശ്വാസവും പാരമ്പര്യവും ഒരുമിച്ചൊരു കുടുംബചരിത്രം
+      <%= t('hero_subtitle') %>
     </div>
 
     
@@ -40,31 +40,67 @@
 <section class="marquee-section">
   <div class="marquee-container">
     <div class="marquee-content">
-      <span>ചിറപ്പുറത്ത് കുടുംബം - വിശ്വാസം, പാരമ്പര്യം, കുടുംബബന്ധം</span>
-      <span>Chirappurath Family - Faith, Tradition, Legacy</span>
-      <span>ചിറപ്പുറത്ത് കുടുംബം - വിശ്വാസം, പാരമ്പര്യം, കുടുംബബന്ധം</span>
-      <span>Chirappurath Family - Faith, Tradition, Legacy</span>
+      <span><%= t('marquee_text') %></span>
+      <span><%= t('marquee_text') %></span>
+      <span><%= t('marquee_text') %></span>
+      <span><%= t('marquee_text') %></span>
     </div>
   </div>
 </section>
 
 
-<!-- ===== FAMILY HISTORY SECTION ===== -->
+<!-- ===== FAMILY HISTORY SECTION WITH NEWS ===== -->
 <section class="history-section">
   <div class="container">
-    <h2 class="history-title text-center">കുടുംബചരിത്രം</h2>
-    <!-- <div class="history-subtitle text-center">വിശ്വാസവും, പാരമ്പര്യവും ഒരുമിച്ച കുടുംബ ചരിത്രം</div> -->
+    <h2 class="history-title text-center"><%= t('family_history') %></h2>
 
-    <div class="history-content">
-      <p>AD 52 ൽ തോമാശ്ലീഹ കേരളത്തിൽ വന്ന് സുവിശേഷ പ്രവർത്തനം നടത്തിയതിൻ്റെ ഫലമായി ക്രിസ്തീയ വിശ്വാസത്തിലേക്ക് വന്ന ബ്രാഹ്മണ കുടുംബങ്ങളിൽ ഒന്നായ കള്ളി ഇല്ലത്തിൻ്റെ പിൻതലമുറക്കാരാണ് ചിറപ്പുറത്ത് കുടുംബാംഗങ്ങൾ എന്ന് ചരിത്രരേഖകളും പൂർവ്വീകരിൽ നിന്നും പരമ്പരാഗതമായി ലഭിച്ചിട്ടുള്ള വിവരങ്ങളും വച്ച് വിശ്വാസിക്കുന്നു. ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആരംഭിക്കുന്നു. നാലാം നൂറ്റാണ്ട് വരെ പാലയൂരിലും അതിന് ശേഷം പതിനഞ്ചാം നൂറ്റാണ്ട് വരെ കാളികാവിലും പിന്നീട് കോട്ടയം ജില്ലയിൽ തോട്ടയ്ക്കാട്ടും പരിസരങ്ങളിലുമായി താമസിച്ചു. ഇന്ന് ഈ വലിയ കുടുംബത്തിലെ അംഗങ്ങൾ ലോകത്തെ എല്ലാ വൻകരകളിലും ഉണ്ട്.</p>
+    <div class="row">
+      <!-- Left Column: Family History -->
+      <div class="col-lg-8">
+        <div class="history-content">
+          <p><%= t('history_para1') %></p>
+          <p><%= t('history_para2') %></p>
+          <p><%= t('history_para3') %></p>
+          <p><%= t('history_para4') %></p>
+          <p><%= t('history_para5') %></p>
+        </div>
+      </div>
 
-      <p>മദ്ധ്യതിരുവിതാംകൂറിലെ പ്രശസ്ത കുടുംബങ്ങളിൽ ഒന്നായ ചിറപ്പുറത്ത് കുടുംബത്തിന് തോട്ടയ്ക്കാട്, കുഴിമറ്റം എന്നീ രണ്ട് ശാഖകൾ ഉണ്ട് . തോട്ടയ്ക്കാട് വന്നു പാർത്ത കള്ളി ഇല്ലത്ത് കുരുവിളയുടെ ഏഴാം തലമുറക്കാരനായ  ചിറപ്പുറത്ത് കുരുവിളയുടെ മൂന്നാമത്തെ പുത്രൻ വർക്കി കുഴിമറ്റം ശാഖ തലവനും ഇളയ പുത്രൻ കുരുവിള തോട്ടയ്ക്കാട് ശാഖ തലവനും ആണ്. മറ്റു മൂന്നു പിതാക്കന്മാർക്ക് പെൺമക്കൾ മാത്രം ആയിരുന്നു. അവരെ യഥാക്രമം പടിഞ്ഞാറെമുറി  കടപ്പൂര്, കണ്ണൊഴുക്കം എന്നീ കുടുംബങ്ങളിൽ വിവാഹം ചെയ്തയച്ചു.</p>
+      <!-- Right Column: News/Events -->
+      <div class="col-lg-4">
+        <div class="news-sidebar">
+          <h3 class="news-sidebar-title"><%= t('news_events') %></h3>
 
-      <p>കുഴിമറ്റം ശാഖയിൽ അഞ്ച് പിതാക്കന്മാരിലൂടെ നടുവിലേടം, കാരാണിക്കുളം, കിഴക്കേക്കുറ്റ്, ചേലചിറ, വല്യവീട്ടിൽ എന്നീ അഞ്ച് ഉപശാഖകളും തോട്ടയ്ക്കാട് ശാഖയിൽ ഏഴ് പിതാക്കന്മാരിലൂടെ തണുങ്ങുംപതിയ്ക്കൽ, കിഴക്കേമുറിയിൽ, ചിറത്തലയ്ക്കൽ, മറ്റത്തിൽ, തണുങ്ങുംപതിയ്ക്കൽ കിഴക്ക്, തണുങ്ങുംപതിയ്ക്കൽ പടിഞ്ഞാറ്, ചിറപ്പുറത്ത് എന്നീ ഏഴ് ഉപശാഖകളും ഉണ്ട് തോട്ടയ്ക്കാട്, കുഴിമറ്റം പ്രദേശത്തും കൂടാതെ കുമളി, മലബാർ മേഖലകളിലും കേരളത്തിൻ്റെ മറ്റു പ്രദേശങ്ങളിലും ഇന്ത്യയുടെ വിവിധ സംസ്ഥാങ്ങളിലും ലോകത്തിൻ്റെ പല രാജ്യങ്ങളിലും ആയി മുന്നൂറിൽ അധികം കുടുംബങ്ങൾ പാർക്കുന്നു.</p>
+          <% if (recentNews && recentNews.length > 0) { %>
+            <div class="news-list">
+              <% recentNews.forEach(news => { %>
+                <div class="news-item">
+                  <a href="/news/<%= news._id %>" class="news-link">
+                    <h4 class="news-item-title">
+                      <%= lang === 'en' ? (news.title_en || news.title_ml) : news.title_ml %>
+                    </h4>
+                    <p class="news-item-date">
+                      <%= new Date(news.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).replace(/ /g, '-') %>
+                    </p>
+                    <p class="news-item-excerpt">
+                      <%= lang === 'en' ? (news.excerpt_en || news.excerpt_ml) : news.excerpt_ml %>
+                    </p>
+                    <span class="news-read-more"><%= t('read_more') %></span>
+                  </a>
+                </div>
+              <% }); %>
+            </div>
+          <% } else { %>
+            <div class="no-news">
+              <p class="text-muted"><%= t('no_news') %></p>
+            </div>
+          <% } %>
 
-      <p>1936 ൽ കുടുംബ യോഗം ആരംഭിക്കുകയും 1977ൽ കുടുംബ ചരിത്രത്തിൻ്റെ ഒന്നാം വാല്യവും. 1999 ൽ രണ്ടാം വാല്യവും പ്രസിദ്ധീകരിക്കുകയും ചെയ്തു .</p>
-
-      <p>കുടുംബ യോഗത്തിൻ്റെ നവതി വർഷത്തോടനുബന്ധിച്ച് 2026 ൽ ആരംഭിച്ച ഈ വെബ്സൈറ്റ്, കുടുംബ ബന്ധങ്ങൾ സുദൃഢമാക്കുന്നതിനും പരസ്പരം കൂടുതൽ മനസ്സിലാക്കുന്നതിനും ഇടയാക്കട്ടെ എന്ന് ആശംസിക്കുകയും, പ്രാർത്ഥിക്കുകയും ചെയ്യുന്നു.</p>
+          <div class="text-center mt-4">
+            <a href="/news" class="btn btn-heritage"><%= t('view_all_news') %></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -77,50 +113,50 @@
   <div class="container">
 
     <h2 class="section-heading text-center">
-      കുടുംബ ശാഖകൾ
+      <%= t('family_branches') %>
     </h2>
     <div class="about-divider"></div>
 
     <div class="row">
-      <!-- കുഴിമറ്റം ശാഖ -->
+      <!-- Kuzhimattam Branch -->
       <div class="col-lg-6">
-        <div class="branch-main-heading">കുഴിമറ്റം ശാഖ</div>
+        <div class="branch-main-heading"><%= t('kuzhimattam_branch') %></div>
         <div class="branch-list">
           <% const kuzhimattamBranches = [
-            "നടുവിലേടം",
-            "കാരണിക്കുളം",
-            "കിഴക്കേക്കുറ്റ്",
-            "ചേലചിറ",
-            "വല്യവീട്ടിൽ"
+            'naduvileddam',
+            'karanikulam',
+            'kizhakkekkurt',
+            'chelachira',
+            'valyavettil'
           ]; %>
 
           <% kuzhimattamBranches.forEach((name, index) => { %>
             <div class="branch-item">
               <span class="branch-number"><%= index + 1 %></span>
-              <span class="branch-name"><%= name %></span>
+              <span class="branch-name"><%= t(name) %></span>
             </div>
           <% }) %>
         </div>
       </div>
 
-      <!-- തോട്ടയ്ക്കാട് ശാഖ -->
+      <!-- Thottaykkad Branch -->
       <div class="col-lg-6">
-        <div class="branch-main-heading">തോട്ടയ്ക്കാട് ശാഖ</div>
+        <div class="branch-main-heading"><%= t('thottaykkad_branch') %></div>
         <div class="branch-list">
           <% const thotaykkadBranches = [
-            "തണുങ്ങുംപതിയ്ക്കൽ",
-            "കിഴക്കേമുറി",
-            "ചിറത്തലയ്ക്കൽ",
-            "മറ്റത്തിൽ",
-            "തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)",
-            "തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)",
-            "ചിറപ്പുറത്ത്"
+            'thanukkumpathiykkol',
+            'kizhakkemuriyil',
+            'chirathalaykkol',
+            'mattathil',
+            'thanukkumpathiykkol_east',
+            'thanukkumpathiykkol_west',
+            'chirappurath'
           ]; %>
 
           <% thotaykkadBranches.forEach((name, index) => { %>
             <div class="branch-item">
               <span class="branch-number"><%= index + 6 %></span>
-              <span class="branch-name"><%= name %></span>
+              <span class="branch-name"><%= t(name) %></span>
             </div>
           <% }) %>
         </div>

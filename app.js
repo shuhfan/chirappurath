@@ -29,10 +29,7 @@ app.set('layout', 'layouts/main');
 app.use(expressLayouts);
 
 // DB connection
-mongoose.connect(process.env.MONGO_URI, { 
-  useNewUrlParser: true, 
-  useUnifiedTopology: true 
-})
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✓ MongoDB connected"))
   .catch(err => {
     console.error("✗ MongoDB error:", err.message);
@@ -45,12 +42,21 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
-  cookie: { 
+  cookie: {
     maxAge: 1000 * 60 * 60 * 8, // 8 hours
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true
   }
 }));
+
+// Translation middleware - makes translation function available to all views
+const { t } = require('./config/translations');
+app.use((req, res, next) => {
+  const lang = req.query.lang || req.session.lang || 'ml';
+  res.locals.lang = lang;
+  res.locals.t = (key) => t(key, lang);
+  next();
+});
 
 // Routes
 app.use('/', require('./routes/public'));

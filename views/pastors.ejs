@@ -1,51 +1,172 @@
 
 <!-- ===== PASTORS SECTION ===== -->
-<section class="fathers-section">
+<section class="pastors-section">
   <div class="container">
-    <h2 class="fathers-heading text-center">വിശ്വാസത്തിന്റെ നേതൃത്വം</h2>
+    <h2 class="pastors-heading text-center">Church Leadership</h2>
     <div class="about-divider mx-auto"></div>
 
-    <div class="row">
-      <!-- Father 1: John -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <div class="father-card">
-          <div class="father-image">
+    <div class="row justify-content-center">
+      <!-- Pastor 1: Moses -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="pastor-card">
+          <div class="pastor-image">
             <img src="/images/Moses.png" alt="Pastor T J Moses">
           </div>
-          <div class="father-details">
-            <div class="father-name">Pastor T J Moses</div>
-            <div class="father-info">Thanugumpathikal</div>
+          <div class="pastor-details">
+            <div class="pastor-name">Pastor T J Moses</div>
+            <div class="pastor-info">Thanugumpathikal</div>
           </div>
         </div>
       </div>
 
-      <!-- Father 2: Jacob -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <div class="father-card">
-          <div class="father-image">
+      <!-- Pastor 2: Thomas -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="pastor-card">
+          <div class="pastor-image">
             <img src="/images/Thomas.png" alt="Pastor Thomas Abhraham">
           </div>
-          <div class="father-details">
-            <div class="father-name">Pastor Thomas Abhraham</div>
-            <div class="father-info">Vilanguparackal</div>
+          <div class="pastor-details">
+            <div class="pastor-name">Pastor Thomas Abhraham</div>
+            <div class="pastor-info">Vilanguparackal</div>
           </div>
         </div>
       </div>
 
-      <!-- Father 3: Binu -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <div class="father-card">
-          <div class="father-image">
+      <!-- Pastor 3: Jacob -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="pastor-card">
+          <div class="pastor-image">
             <img src="/images/jacob.png" alt="Pastor TJ Jacob">
           </div>
-          <div class="father-details">
-            <div class="father-name">Pastor TJ Jacob</div>
-            <div class="father-info">Thanugumpathikal</div>
+          <div class="pastor-details">
+            <div class="pastor-name">Pastor TJ Jacob</div>
+            <div class="pastor-info">Thanugumpathikal</div>
           </div>
         </div>
       </div>
-
-    
     </div>
   </div>
 </section>
+
+<style>
+/* Pastors Section Styling */
+.pastors-section {
+  padding: 60px 0;
+  background: #f7f3ee;
+}
+
+.pastors-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.pastor-card {
+  background: #fff;
+  border: 1px solid #e6d9c3;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pastor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  border-color: #d4af37;
+}
+
+.pastor-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pastor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s ease;
+}
+
+.pastor-card:hover .pastor-image img {
+  transform: scale(1.08);
+}
+
+.pastor-details {
+  padding: 30px 25px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.pastor-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.pastor-info {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .pastor-image {
+    height: 350px;
+  }
+
+  .pastor-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pastors-heading {
+    font-size: 32px;
+  }
+
+  .pastor-image {
+    height: 450px;
+  }
+
+  .pastor-card {
+    margin-bottom: 30px;
+  }
+
+  .pastor-name {
+    font-size: 18px;
+  }
+
+  .pastor-info {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pastor-image {
+    height: 400px;
+  }
+}
+</style>

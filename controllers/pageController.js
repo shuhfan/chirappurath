@@ -1,5 +1,6 @@
 const Branch = require('../models/Branch');
 const Gallery = require('../models/Gallery');
+const News = require('../models/News');
 
 // Helper function to get language from request (query param or localStorage via session)
 function getLanguage(req) {
@@ -7,9 +8,15 @@ function getLanguage(req) {
 }
 
 exports.home = async (req, res) => {
-  const lang = getLanguage(req);
   const branches = await Branch.find().lean();
-  res.render('home', { lang, branches });
+
+  // Fetch recent news
+  const recentNews = await News.find({ status: 'published' })
+    .sort({ date: -1 })
+    .limit(5)
+    .lean();
+
+  res.render('home', { branches, recentNews });
 };
 
 exports.about = async (req, res) => {

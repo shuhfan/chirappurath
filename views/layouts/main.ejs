@@ -23,6 +23,7 @@
   
   <!-- Custom -->
   <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
 
@@ -33,6 +34,13 @@
       <a class="navbar-brand d-flex align-items-center gap-2" href="/">
         <img src="/images/logo.png" alt="Chirappurath Family" class="nav-logo">
       </a>
+
+      <!-- Custom Language Switcher -->
+      <div class="language-switcher">
+        <a href="/lang/ml" class="lang-btn <%= (typeof lang === 'undefined' || lang === 'ml') ? 'active' : '' %>" id="btn-ml">മലയാളം</a>
+        <span class="lang-divider">|</span>
+        <a href="/lang/en" class="lang-btn <%= (typeof lang !== 'undefined' && lang === 'en') ? 'active' : '' %>" id="btn-en">English</a>
+      </div>
     </div>
   </div>
 </header>
@@ -40,18 +48,14 @@
 <!-- ===== NAVIGATION MENU SECTION (STICKY) ===== -->
 <nav class="navbar navbar-expand-lg premium-nav sticky-top p-0">
   <div class="container-fluid px-3 px-lg-5">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto gap-1 pb-1">
         <!-- Home -->
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        
+
         <!-- About Family -->
         <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Family</a>
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Family</a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
             <li><a class="dropdown-item" href="/about">History</a></li>
             <li><a class="dropdown-item" href="/priest">Priests</a></li>
@@ -61,26 +65,26 @@
 
         <!-- Branches -->
         <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="branchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Branches</a>
+          <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Branches</a>
           <ul class="dropdown-menu" aria-labelledby="branchesDropdown">
-            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">കുഴിമറ്റം ശാഖ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">Kuzhimattam Branch</a></li>
             <li class="submenu-items">
-              <a class="dropdown-item ps-4" href="#">നടുവിലേടം</a>
-              <a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a>
-              <a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a>
-              <a class="dropdown-item ps-4" href="#">ചേലചിറ</a>
-              <a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a>
+              <a class="dropdown-item ps-4" href="#">Naduvileddam</a>
+              <a class="dropdown-item ps-4" href="#">Karanikulam</a>
+              <a class="dropdown-item ps-4" href="#">Kizhakkekkurt</a>
+              <a class="dropdown-item ps-4" href="#">Chelachira</a>
+              <a class="dropdown-item ps-4" href="#">Valyavettil</a>
             </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">തോട്ടയ്ക്കാട് ശാഖ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">Thottaykkad Branch</a></li>
             <li class="submenu-items">
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a>
-              <a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a>
-              <a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a>
-              <a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a>
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a>
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a>
-              <a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol</a>
+              <a class="dropdown-item ps-4" href="#">Kizhakkemuriyil</a>
+              <a class="dropdown-item ps-4" href="#">Chirathalaykkol</a>
+              <a class="dropdown-item ps-4" href="#">Mattathil</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol (East)</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol (West)</a>
+              <a class="dropdown-item ps-4" href="#">Chirappurath</a>
             </li>
           </ul>
         </li>
@@ -93,26 +97,26 @@
 
         <!-- Gallery -->
         <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+          <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
           <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
-            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">കുഴിമറ്റം ശാഖ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">Kuzhimattam Branch</a></li>
             <li class="submenu-items">
-              <a class="dropdown-item ps-4" href="#">നടുവിലേടം</a>
-              <a class="dropdown-item ps-4" href="#">കാരണിക്കുളം</a>
-              <a class="dropdown-item ps-4" href="#">കിഴക്കേക്കുറ്റ്</a>
-              <a class="dropdown-item ps-4" href="#">ചേലചിറ</a>
-              <a class="dropdown-item ps-4" href="#">വല്യവീട്ടിൽ</a>
+              <a class="dropdown-item ps-4" href="#">Naduvileddam</a>
+              <a class="dropdown-item ps-4" href="#">Karanikulam</a>
+              <a class="dropdown-item ps-4" href="#">Kizhakkekkurt</a>
+              <a class="dropdown-item ps-4" href="#">Chelachira</a>
+              <a class="dropdown-item ps-4" href="#">Valyavettil</a>
             </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">തോട്ടയ്ക്കാട് ശാഖ</a></li>
+            <li><a class="dropdown-header submenu-header" onclick="toggleSubmenu(event)">Thottaykkad Branch</a></li>
             <li class="submenu-items">
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ</a>
-              <a class="dropdown-item ps-4" href="#">കിഴക്കേമുറി</a>
-              <a class="dropdown-item ps-4" href="#">ചിറത്തലയ്ക്കൽ</a>
-              <a class="dropdown-item ps-4" href="#">മറ്റത്തിൽ</a>
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a>
-              <a class="dropdown-item ps-4" href="#">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a>
-              <a class="dropdown-item ps-4" href="#">ചിറപ്പുറത്ത്</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol</a>
+              <a class="dropdown-item ps-4" href="#">Kizhakkemuriyil</a>
+              <a class="dropdown-item ps-4" href="#">Chirathalaykkol</a>
+              <a class="dropdown-item ps-4" href="#">Mattathil</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol (East)</a>
+              <a class="dropdown-item ps-4" href="#">Thanukkumpathiykkol (West)</a>
+              <a class="dropdown-item ps-4" href="#">Chirappurath</a>
             </li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/pastors"><b>Pastors</b></a></li>
@@ -121,11 +125,12 @@
 
         <!-- News/Events -->
         <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">News/Events</a>
+          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">News and Events</a>
           <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-            <li><a class="dropdown-item" href="#">Albums</a></li>
-            <li><a class="dropdown-item" href="#">Videos</a></li>
-            <li><a class="dropdown-item" href="#">Obituary</a></li>
+            <li><a class="dropdown-item" href="/news">All News</a></li>
+            <li><a class="dropdown-item" href="/news?category=event">Events</a></li>
+            <li><a class="dropdown-item" href="/news?category=announcement">Announcements</a></li>
+            <li><a class="dropdown-item" href="/news?category=obituary">Obituary</a></li>
           </ul>
         </li>
 
@@ -144,6 +149,10 @@
         </li> -->
       </ul>
     </div>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
 
@@ -157,8 +166,7 @@
       <!-- Left Section: Logo & Social -->
       <div class="footer-section footer-logo-section">
         <img src="/images/logo.png" alt="Chirappurath Family" class="footer-logo">
-        <h3 class="footer-church-name">ചിറപ്പുറത്ത് കുടുംബം</h3>
-        <!-- <p class="footer-address">തോട്ടയ്ക്കാട് മോട്ടലൈൻ - 2<br>Reg.No. A 57/84</p> -->
+        <h3 class="footer-church-name">CHIRAPPURATH FAMILY</h3>
         <div class="footer-social">
           <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
           <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -173,34 +181,34 @@
           <li><a href="/about">About Family</a></li>
           <li><a href="/directory">Directory</a></li>
           <li><a href="/family-tree">Family Tree</a></li>
-          <li><a href="/news">News/Events</a></li>
+          <li><a href="/news">News and Events</a></li>
           <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
 
-      <!-- Branches Section: കുഴിമറ്റം ശാഖ -->
+      <!-- Branches Section: Kuzhimattam -->
       <div class="footer-section">
-        <h4 class="footer-section-title">കുഴിമറ്റം ശാഖ</h4>
+        <h4 class="footer-section-title">Kuzhimattam Branch</h4>
         <ul class="footer-links">
-          <li><a href="/branches/kuzhimattam/naduvileddam">നടുവിലേടം</a></li>
-          <li><a href="/branches/kuzhimattam/karanikulam">കാരണിക്കുളം</a></li>
-          <li><a href="/branches/kuzhimattam/kizhakkekkurt">കിഴക്കേക്കുറ്റ്</a></li>
-          <li><a href="/branches/kuzhimattam/chelachira">ചേലചിറ</a></li>
-          <li><a href="/branches/kuzhimattam/valyavettil">വല്യവീട്ടിൽ</a></li>
+          <li><a href="/branches/kuzhimattam/naduvileddam">Naduvileddam</a></li>
+          <li><a href="/branches/kuzhimattam/karanikulam">Karanikulam</a></li>
+          <li><a href="/branches/kuzhimattam/kizhakkekkurt">Kizhakkekkurt</a></li>
+          <li><a href="/branches/kuzhimattam/chelachira">Chelachira</a></li>
+          <li><a href="/branches/kuzhimattam/valyavettil">Valyavettil</a></li>
         </ul>
       </div>
 
-      <!-- Branches Section: തോട്ടയ്ക്കാട് ശാഖ -->
+      <!-- Branches Section: Thottaykkad -->
       <div class="footer-section">
-        <h4 class="footer-section-title">തോട്ടയ്ക്കാട് ശാഖ</h4>
+        <h4 class="footer-section-title">Thottaykkad Branch</h4>
         <ul class="footer-links">
-          <li><a href="/branches/thotaykkad/thanukkumpathiykkol">തണുങ്ങുംപതിയ്ക്കൽ</a></li>
-          <li><a href="/branches/thotaykkad/kizhakkemurei">കിഴക്കേമുറി</a></li>
-          <li><a href="/branches/thotaykkad/chirathalaykkol">ചിറത്തലയ്ക്കൽ</a></li>
-          <li><a href="/branches/thotaykkad/mattathil">മറ്റത്തിൽ</a></li>
-          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-east">തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)</a></li>
-          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-west">തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)</a></li>
-          <li><a href="/branches/thotaykkad/chirapputath">ചിറപ്പുറത്ത്</a></li>
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol">Thanukkumpathiykkol</a></li>
+          <li><a href="/branches/thotaykkad/kizhakkemurei">Kizhakkemuriyil</a></li>
+          <li><a href="/branches/thotaykkad/chirathalaykkol">Chirathalaykkol</a></li>
+          <li><a href="/branches/thotaykkad/mattathil">Mattathil</a></li>
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-east">Thanukkumpathiykkol (East)</a></li>
+          <li><a href="/branches/thotaykkad/thanukkumpathiykkol-west">Thanukkumpathiykkol (West)</a></li>
+          <li><a href="/branches/thotaykkad/chirapputath">Chirappurath</a></li>
         </ul>
       </div>
 

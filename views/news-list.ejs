@@ -1,0 +1,205 @@
+<section class="hero">
+  <div class="hero-box"></div>
+</section>
+
+<section class="gallery-wrapper">
+  <div class="container">
+    <h1 class="page-title text-center mb-3"><%= t('news_and_events_title') %></h1>
+    <div class="about-divider"></div>
+
+    <!-- Category Filter -->
+    <div class="text-center mb-5">
+      <div class="btn-group" role="group">
+        <a href="/news?category=all" class="btn <%= category === 'all' ? 'btn-heritage' : 'btn-outline-gold' %>"><%= t('all') %></a>
+        <a href="/news?category=news" class="btn <%= category === 'news' ? 'btn-heritage' : 'btn-outline-gold' %>"><%= t('news') %></a>
+        <a href="/news?category=event" class="btn <%= category === 'event' ? 'btn-heritage' : 'btn-outline-gold' %>"><%= t('events_label') %></a>
+        <a href="/news?category=announcement" class="btn <%= category === 'announcement' ? 'btn-heritage' : 'btn-outline-gold' %>"><%= t('announcements_label') %></a>
+      </div>
+    </div>
+
+    <!-- News Grid -->
+    <% if (news && news.length > 0) { %>
+      <div class="row g-4">
+        <% news.forEach(item => { %>
+          <div class="col-md-6 col-lg-4">
+            <div class="news-card">
+              <div class="news-card-image">
+                <img src="<%= item.image || '/images/news-default.jpg' %>" alt="<%= lang === 'en' ? (item.title_en || item.title_ml) : item.title_ml %>">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span class="news-date">
+                    <%= new Date(item.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).replace(/ /g, '-') %>
+                  </span>
+                  <span class="news-category <%= item.category %>">
+                    <% if (item.category === 'news') { %>
+                      <%= t('news_item') %>
+                    <% } else if (item.category === 'event') { %>
+                      <%= t('event_item') %>
+                    <% } else if (item.category === 'announcement') { %>
+                      <%= t('announcement_item') %>
+                    <% } else { %>
+                      <%= item.category %>
+                    <% } %>
+                  </span>
+                </div>
+                <h3 class="news-card-title">
+                  <%= lang === 'en' ? (item.title_en || item.title_ml) : item.title_ml %>
+                </h3>
+                <p class="news-card-excerpt">
+                  <%= lang === 'en' ? (item.excerpt_en || item.excerpt_ml) : item.excerpt_ml %>
+                </p>
+                <a href="/news/<%= item._id %>" class="btn btn-outline-gold btn-sm"><%= t('read_more') %></a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    <% } else { %>
+      <div class="text-center py-5">
+        <p class="text-muted"><%= t('no_news_available') %></p>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<style>
+.news-card {
+  background: #fff;
+  border: 1px solid #e6d9c3;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-color: #d4af37;
+}
+
+.news-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.news-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card-image img {
+  transform: scale(1.08);
+}
+
+.news-card-body {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #999;
+  font-family: 'Playfair Display', serif;
+}
+
+.news-category {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-family: 'Noto Serif Malayalam', serif;
+  background: rgba(212,175,55,0.15);
+  color: #c9a43a;
+}
+
+.news-card-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.news-card-excerpt {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn-outline-gold {
+  border: 1.5px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 250ms ease;
+  font-family: 'Noto Serif Malayalam', serif;
+}
+
+.btn-outline-gold:hover {
+  background: #d4af37;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(212,175,55,0.3);
+  transform: translateY(-2px);
+}
+
+.btn-group .btn {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.page-title {
+  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-group .btn {
+    font-size: 12px;
+    padding: 8px 15px;
+    margin: 3px;
+  }
+}
+</style>
