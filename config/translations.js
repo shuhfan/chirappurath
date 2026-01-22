@@ -15,11 +15,11 @@ const translations = {
   news_events_en: 'News and Events',
 
   // Branch Names
-  kuzhimattam_branch_ml: 'കുഴിമറ്റം ശാഖ',
-  kuzhimattam_branch_en: 'Kuzhimattam Branch',
+  Kuzhimattom_branch_ml: 'കുഴിമറ്റം ശാഖ',
+  Kuzhimattom_branch_en: 'Kuzhimattom Branch',
 
-  thottaykkad_branch_ml: 'തോട്ടയ്ക്കാട് ശാഖ',
-  thottaykkad_branch_en: 'Thottaykkad Branch',
+  Thottaykad_branch_ml: 'തോട്ടയ്ക്കാട് ശാഖ',
+  Thottaykad_branch_en: 'Thottaykad Branch',
 
   // Buttons
   read_more_ml: 'കൂടുതൽ വായിക്കുക',
@@ -62,15 +62,15 @@ const translations = {
   committee_members_ml: 'കമ്മിറ്റി അംഗങ്ങൾ',
   committee_members_en: 'Committee Members',
 
-  // Sub-branches (Kuzhimattam)
-  naduvileddam_ml: 'നടുവിലേടം',
-  naduvileddam_en: 'Naduvileddam',
+  // Sub-branches (Kuzhimattom)
+  Naduviledam_ml: 'നടുവിലേടം',
+  Naduviledam_en: 'Naduviledam',
 
   karanikulam_ml: 'കാരണിക്കുളം',
   karanikulam_en: 'Karanikulam',
 
-  kizhakkekkurt_ml: 'കിഴക്കേക്കുറ്റ്',
-  kizhakkekkurt_en: 'Kizhakkekkurt',
+  Kizhakkekkutt_ml: 'കിഴക്കേക്കുറ്റ്',
+  Kizhakkekkutt_en: 'Kizhakkekkutt',
 
   chelachira_ml: 'ചേലചിറ',
   chelachira_en: 'Chelachira',
@@ -78,24 +78,24 @@ const translations = {
   valyavettil_ml: 'വല്യവീട്ടിൽ',
   valyavettil_en: 'Valyavettil',
 
-  // Sub-branches (Thottaykkad)
-  thanukkumpathiykkol_ml: 'തണുങ്ങുംപതിയ്ക്കൽ',
-  thanukkumpathiykkol_en: 'Thanukkumpathiykkol',
+  // Sub-branches (Thottaykad)
+  Thanugumpathickal_ml: 'തണുങ്ങുംപതിയ്ക്കൽ',
+  Thanugumpathickal_en: 'Thanugumpathickal',
 
-  kizhakkemuriyil_ml: 'കിഴക്കേമുറി',
-  kizhakkemuriyil_en: 'Kizhakkemuriyil',
+  Kizhakkemuri_ml: 'കിഴക്കേമുറി',
+  Kizhakkemuri_en: 'Kizhakkemuri',
 
-  chirathalaykkol_ml: 'ചിറത്തലയ്ക്കൽ',
-  chirathalaykkol_en: 'Chirathalaykkol',
+  Chirathalaykkal_ml: 'ചിറത്തലയ്ക്കൽ',
+  Chirathalaykkal_en: 'Chirathalaykkal',
 
   mattathil_ml: 'മറ്റത്തിൽ',
   mattathil_en: 'Mattathil',
 
-  thanukkumpathiykkol_east_ml: 'തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)',
-  thanukkumpathiykkol_east_en: 'Thanukkumpathiykkol (East)',
+  Thanugumpathickal_east_ml: 'തണുങ്ങുംപതിയ്ക്കൽ (കിഴക്ക്)',
+  Thanugumpathickal_east_en: 'Thanugumpathickal (East)',
 
-  thanukkumpathiykkol_west_ml: 'തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)',
-  thanukkumpathiykkol_west_en: 'Thanukkumpathiykkol (West)',
+  Thanugumpathickal_west_ml: 'തണുങ്ങുംപതിയ്ക്കൽ (പടിഞ്ഞാറ്)',
+  Thanugumpathickal_west_en: 'Thanugumpathickal (West)',
 
   chirappurath_ml: 'ചിറപ്പുറത്ത്',
   chirappurath_en: 'Chirappurath',
@@ -131,13 +131,13 @@ const translations = {
 
   // Family History Content (Paragraphs)
   history_para1_ml: 'AD 52 ൽ തോമാശ്ലീഹ കേരളത്തിൽ വന്ന് സുവിശേഷ പ്രവർത്തനം നടത്തിയതിൻ്റെ ഫലമായി ക്രിസ്തീയ വിശ്വാസത്തിലേക്ക് വന്ന ബ്രാഹ്മണ കുടുംബങ്ങളിൽ ഒന്നായ കള്ളി ഇല്ലത്തിൻ്റെ പിൻതലമുറക്കാരാണ് ചിറപ്പുറത്ത് കുടുംബാംഗങ്ങൾ എന്ന് ചരിത്രരേഖകളും പൂർവ്വീകരിൽ നിന്നും പരമ്പരാഗതമായി ലഭിച്ചിട്ടുള്ള വിവരങ്ങളും വച്ച് വിശ്വാസിക്കുന്നു. ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആരംഭിക്കുന്നു. നാലാം നൂറ്റാണ്ട് വരെ പാലയൂരിലും അതിന് ശേഷം പതിനഞ്ചാം നൂറ്റാണ്ട് വരെ കാളികാവിലും പിന്നീട് കോട്ടയം ജില്ലയിൽ തോട്ടയ്ക്കാട്ടും പരിസരങ്ങളിലുമായി താമസിച്ചു. ഇന്ന് ഈ വലിയ കുടുംബത്തിലെ അംഗങ്ങൾ ലോകത്തെ എല്ലാ വൻകരകളിലും ഉണ്ട്.',
-  history_para1_en: 'According to historical records and information passed down from ancestors, the members of the Chirappurath family are descendants of the Kalli household, one of the Brahmin families that converted to Christianity as a result of St. Thomas\'s evangelical work in Kerala in AD 52. The history of the Chirappurath family begins in the first century. They lived in Palayoor until the fourth century, then in Kalikavu until the fifteenth century, and later settled in Thottaykkad and its surroundings in Kottayam district. Today, members of this large family are present on all continents of the world.',
+  history_para1_en: 'According to historical records and information passed down from ancestors, the members of the Chirappurath family are descendants of the Kalli household, one of the Brahmin families that converted to Christianity as a result of St. Thomas\'s evangelical work in Kerala in AD 52. The history of the Chirappurath family begins in the first century. They lived in Palayoor until the fourth century, then in Kalikavu until the fifteenth century, and later settled in Thottaykad and its surroundings in Kottayam district. Today, members of this large family are present on all continents of the world.',
 
   history_para2_ml: 'മദ്ധ്യതിരുവിതാംകൂറിലെ പ്രശസ്ത കുടുംബങ്ങളിൽ ഒന്നായ ചിറപ്പുറത്ത് കുടുംബത്തിന് തോട്ടയ്ക്കാട്, കുഴിമറ്റം എന്നീ രണ്ട് ശാഖകൾ ഉണ്ട് . തോട്ടയ്ക്കാട് വന്നു പാർത്ത കള്ളി ഇല്ലത്ത് കുരുവിളയുടെ ഏഴാം തലമുറക്കാരനായ ചിറപ്പുറത്ത് കുരുവിളയുടെ അഞ്ചു പുത്രന്മാരിൽ മൂന്നാമത്തെ പുത്രൻ വർക്കി കുഴിമറ്റം ശാഖ തലവനും ഇളയ പുത്രൻ കുരുവിള തോട്ടയ്ക്കാട് ശാഖ തലവനും ആണ്.',
-  history_para2_en: 'The Chirappurath family, one of the prominent families in Central Travancore, has two branches: Thottaykkad and Kuzhimattam. Varki, the third son of Chirappurath Kuruvila (seventh generation of Kalli household Kuruvila who settled in Thottaykkad), became the head of the Kuzhimattam branch, and his younger son Kuruvila became the head of the Thottaykkad branch. The other three ancestors had only daughters, who were married into the Padinjaremurei, Kadappoor, and Kannozhukam families respectively.',
+  history_para2_en: 'The Chirappurath family, one of the prominent families in Central Travancore, has two branches: Thottaykad and Kuzhimattom. Varki, the third son of Chirappurath Kuruvila (seventh generation of Kalli household Kuruvila who settled in Thottaykad), became the head of the Kuzhimattom branch, and his younger son Kuruvila became the head of the Thottaykad branch. The other three ancestors had only daughters, who were married into the Padinjaremurei, Kadappoor, and Kannozhukam families respectively.',
 
   history_para3_ml: 'കുഴിമറ്റം ശാഖയിൽ അഞ്ച് പിതാക്കന്മാരിലൂടെ നടുവിലേടം, കാരാണിക്കുളം, കിഴക്കേക്കുറ്റ്, ചേലചിറ, വല്യവീട്ടിൽ എന്നീ അഞ്ച് ഉപശാഖകളും തോട്ടയ്ക്കാട് ശാഖയിൽ ഏഴ് പിതാക്കന്മാരിലൂടെ തണുങ്ങുംപതിയ്ക്കൽ, കിഴക്കേമുറിയിൽ, ചിറത്തലയ്ക്കൽ, മറ്റത്തിൽ, തണുങ്ങുംപതിയ്ക്കൽ കിഴക്ക്, തണുങ്ങുംപതിയ്ക്കൽ പടിഞ്ഞാറ്, ചിറപ്പുറത്ത് എന്നീ ഏഴ് ഉപശാഖകളും ഉണ്ട് തോട്ടയ്ക്കാട്, കുഴിമറ്റം പ്രദേശത്തും കൂടാതെ കുമളി, മലബാർ മേഖലകളിലും കേരളത്തിൻ്റെ മറ്റു പ്രദേശങ്ങളിലും ഇന്ത്യയുടെ വിവിധ സംസ്ഥാങ്ങളിലും ലോകത്തിൻ്റെ പല രാജ്യങ്ങളിലും ആയി മുന്നൂറിൽ അധികം കുടുംബങ്ങൾ പാർക്കുന്നു.',
-  history_para3_en: 'The Kuzhimattam branch has five sub-branches through five ancestors: Naduvileddam, Karanikulam, Kizhakkekkurt, Chelachira, and Valyavettil. The Thottaykkad branch has seven sub-branches through seven ancestors: Thanukkumpathiykkol, Kizhakkemuriyil, Chirathalaykkol, Mattathil, Thanukkumpathiykkol East, Thanukkumpathiykkol West, and Chirappurath. More than three hundred families are settled in Thottaykkad, Kuzhimattam areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
+  history_para3_en: 'The Kuzhimattom branch has five sub-branches through five ancestors: Naduviledam, Karanikulam, Kizhakkekkutt, Chelachira, and Valyavettil. The Thottaykad branch has seven sub-branches through seven ancestors: Thanugumpathickal, Kizhakkemuri, Chirathalaykkal, Mattathil, Thanugumpathickal East, Thanugumpathickal West, and Chirappurath. More than three hundred families are settled in Thottaykad, Kuzhimattom areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
 
   history_para4_ml: '1936 ൽ കുടുംബ യോഗം ആരംഭിക്കുകയും 1977ൽ കുടുംബ ചരിത്രത്തിൻ്റെ ഒന്നാം വാല്യവും. 1999 ൽ രണ്ടാം വാല്യവും പ്രസിദ്ധീകരിക്കുകയും ചെയ്തു .',
   history_para4_en: 'The family meetings began in 1936, and the first volume of family history was published in 1977, followed by the second volume in 1999.',
@@ -153,19 +153,19 @@ const translations = {
   about_para1_en: 'All ancient Christian families of Kerala claim and take pride in tracing their origin to the arrival of St. Thomas the Apostle in AD 52. It is not feasible to connect the links of this history uninterruptedly from the first century to modern times. The Chirappurath Family History book published in 1977 attempted to compile all available historical records and information traditionally passed down from ancestors, and to elaborate on the modern period based on these foundations.',
 
   about_para2_ml: 'മാർത്തോമ്മാ ശ്ലീഹാ മലയാളക്കരയിൽ വന്നിറങ്ങിയതിനു ശേഷം കൊടുങ്ങല്ലൂർ, പാലയൂർ, പറവൂർ, നിരണം, കൊല്ലം, തെക്കൻ പള്ളിപ്പുറം, നിലയ്ക്കൽ എന്നീ സ്ഥലങ്ങളിൽ പള്ളികൾ സ്ഥാപിച്ചതായും കള്ളി, കാളിയാങ്കൽ, ശങ്കരപുരി, പകലോമറ്റം എന്നീ ബ്രാഹ്മണ കുടുംബങ്ങളെ ക്രിസ്തു മതത്തിലേക്ക് പരിവർത്തനം ചെയ്യിച്ചതായും അവരിൽ നിന്ന് അപ്പോസ്തോലിക മാതൃകയിൽ കൈവെപ്പോടുകൂടി വൈദീകരെ സഭാ ശുശ്രൂഷയ്ക്കായി പ്രതിഷ്ഠിച്ചതായും വിശ്വസിക്കുന്നു. അതിൽ കള്ളി ഇല്ലക്കാരിൽ ചിലർ വിവിധ കാരണങ്ങളാൽ A.D. 337 ൽ പാലയൂരിൽ നിന്നും പുറപ്പെട്ട് കുറവലങ്ങാട്ട് വന്നു താമസിച്ചെന്നും A.D. 345 ൽ ക്നായിതൊമ്മ ൻ്റെ കൂടെ വന്ന ജോസഫ് മെത്രാൻ അവർക്ക് ഒരു പള്ളി കൂദാശ ചെയ്തു കൊടുത്തെന്നും " മാർത്തോമ്മാ ശ്ലീഹായുടെ ചരിത്രം" എന്ന ഗ്രന്ഥത്തിൽ രേഖപ്പെടുത്തിയിട്ടുണ്ട്. അവിടെ നിന്നും ഇന്നേക്ക് ഏതാണ്ട് 500 വർഷങ്ങൾക്കു മുമ്പ് കള്ളി ഇല്ലത്ത് ഭവനത്തിലെ കുരുവിള എന്ന് ആൾ തോട്ടയ്ക്കാട്ട് വന്നു താമസം തുടങ്ങി. പതിനഞ്ചാം നൂറ്റാണ്ടിൻ്റെ അവസാനമൊ, പതിനാറാം നൂറ്റാണ്ടിൻ്റെ ആരംഭത്തിലോ തോട്ടയ്ക്കാട് വന്നു പാർത്ത കള്ളിയില്ലത്ത് കുരുവിള ആണ് നമ്മുടെ കുടുംബ പിതാവായി കണ്ടെത്താൻ കഴിയുന്നത്.  ഇല്ലപ്പേര് അദ്ദേഹം സ്വീകരിച്ചെങ്കിലും പിൽക്കാലത്ത് ഈ വീട്ടുപേര് " കണ്ണൊഴുക്കത്ത് " എന്ന് രൂപാന്തരപ്പെട്ടു. തോട്ടയ്ക്കാട് താമസം തുടങ്ങിയ കണ്ണൊഴുക്കം എന്ന് പിന്നീട് അറിയപ്പെട്ട കള്ളി ഇല്ലത്ത് കുരുവിള യുടെ ഏഴാം തലമുറക്കാരനായ ചിറപ്പുറത്ത് കുരുവിള മുതലുള്ള ചരിത്രമാണ് കുടുംബ ചരിത്രമായി പ്രസിദ്ധീകരിച്ചിരിക്കുന്നത്.',
-  about_para2_en: 'It is believed that after St. Thomas landed on the Malabar coast, he established churches in Kodungallur, Palayoor, Paravoor, Niranam, Kollam, Thekkan Pallippuram, and Nilaykal, and converted the Brahmin families of Kalli, Kaliyangal, Sankarapuri, and Palamattathu to Christianity, ordaining priests from among them through apostolic laying of hands for church ministry. It is recorded in the book "History of St. Thomas the Apostle" that some members of the Kalli household left Palayoor in AD 337 for various reasons and settled in Kuravilangad, and that Bishop Joseph, who came with Knai Thommen in AD 345, consecrated a church for them. From there, about 500 years ago, a person named Kuruvila from the Kalli household came and began residing in Thottaykkad. Kalli household\'s Kuruvila, who settled in Thottaykkad in the late 15th or early 16th century, is the identifiable family patriarch. Although he took the house name, it later transformed to "Kannozhukkathu". The published family history begins with Chirappurath Kuruvila, the seventh generation descendant of Kalli household Kuruvila, later known as Kannozhukam, who began residing in Thottaykkad.',
+  about_para2_en: 'It is believed that after St. Thomas landed on the Malabar coast, he established churches in Kodungallur, Palayoor, Paravoor, Niranam, Kollam, Thekkan Pallippuram, and Nilaykal, and converted the Brahmin families of Kalli, Kaliyangal, Sankarapuri, and Palamattathu to Christianity, ordaining priests from among them through apostolic laying of hands for church ministry. It is recorded in the book "History of St. Thomas the Apostle" that some members of the Kalli household left Palayoor in AD 337 for various reasons and settled in Kuravilangad, and that Bishop Joseph, who came with Knai Thommen in AD 345, consecrated a church for them. From there, about 500 years ago, a person named Kuruvila from the Kalli household came and began residing in Thottaykad. Kalli household\'s Kuruvila, who settled in Thottaykad in the late 15th or early 16th century, is the identifiable family patriarch. Although he took the house name, it later transformed to "Kannozhukkathu". The published family history begins with Chirappurath Kuruvila, the seventh generation descendant of Kalli household Kuruvila, later known as Kannozhukam, who began residing in Thottaykad.',
 
   about_para3_ml: 'തോമാശ്ലീഹയുടെ സുവിശേഷ പ്രവർത്തനഫലമായി ക്രിസ്തീയ വിശ്വാസത്തിലേക്ക് വന്ന ബ്രാഹ്മണ കുടുംബങ്ങളിൽ ഒന്നായ കള്ളി ഇല്ലത്തിൻ്റെ പിൻതലമുറക്കാരാണ് ചിറപ്പുറത്ത് കുടുംബാംഗങ്ങൾ എന്ന് ചരിത്രരേഖകളും പൂർവ്വീകരിൽ നിന്നും പരമ്പരാഗതമായി ലഭിച്ചിട്ടുള്ള വിവരങ്ങളും വച്ച് വിശ്വസിക്കുന്നു. ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം ഒന്നാം നൂറ്റാണ്ടു മുതൽ ആരംഭിക്കുന്നു.  നാലാം നൂറ്റാണ്ട് വരെ പാലയൂരിലും അതിന് ശേഷം പതിനഞ്ചാം നൂറ്റാണ്ട് വരെ കാളികാവിലും പിന്നീട് കോട്ടയം ജില്ലയിൽ തോട്ടയ്ക്കാട്ടും പരിസരങ്ങളിലുമായി കുടുംബാഗങ്ങൾ താമസിച്ചു.  ഇന്ന് ഈ വലിയ കുടുംബത്തിലെ അംഗങ്ങൾ ലോകത്തെ എല്ലാ വൻകരകളിലും ഉണ്ട്.',
-  about_para3_en: 'According to historical records and information traditionally passed down from ancestors, members of the Chirappurath family are believed to be descendants of the Kalli household, one of the Brahmin families that converted to Christianity as a result of St. Thomas\'s evangelical work. The history of the Chirappurath family begins in the first century. Family members lived in Palayoor until the fourth century, then in Kalikavu until the fifteenth century, and later in Thottaykkad and surrounding areas in Kottayam district. Today, members of this large family are present on all continents of the world.',
+  about_para3_en: 'According to historical records and information traditionally passed down from ancestors, members of the Chirappurath family are believed to be descendants of the Kalli household, one of the Brahmin families that converted to Christianity as a result of St. Thomas\'s evangelical work. The history of the Chirappurath family begins in the first century. Family members lived in Palayoor until the fourth century, then in Kalikavu until the fifteenth century, and later in Thottaykad and surrounding areas in Kottayam district. Today, members of this large family are present on all continents of the world.',
 
   about_para4_ml: 'മദ്ധ്യതിരുവിതാംകൂറിലെ പ്രശസ്ത കുടുംബങ്ങളിൽ ഒന്നായ ചിറപ്പുറത്ത് കുടുംബത്തിന് തോട്ടയ്ക്കാട്, കുഴിമറ്റം എന്നീ രണ്ട് ശാഖകൾ ഉണ്ട് . തോട്ടയ്ക്കാട് വന്നു പാർത്ത കള്ളി ഇല്ലത്ത് കുരുവിളയുടെ ഏഴാം തലമുറക്കാരനായ  ചിറപ്പുറത്ത് കുരുവിളയുടെ, അഞ്ച് പുത്രന്മാരിൽ മൂന്നാമത്തെ പുത്രൻ വർക്കി കുഴിമറ്റം ശാഖ തലവനും ഇളയ പുത്രൻ കുരുവിള തോട്ടയ്ക്കാട് ശാഖ തലവനും ആണ്. മറ്റു മൂന്നു പിതാക്കന്മാർക്ക് പെൺമക്കൾ മാത്രം ആയിരുന്നു. അവരെ യഥാക്രമം പടിഞ്ഞാറെമുറി  കടപ്പൂര്, കണ്ണൊഴുക്കം എന്നീ കുടുംബങ്ങളിൽ വിവാഹം ചെയ്തയച്ചു.',
-  about_para4_en: 'The Chirappurath family, one of the prominent families in Central Travancore, has two branches: Thottaykkad and Kuzhimattam. Among the five sons of Chirappurath Kuruvila, the seventh generation descendant of Kalli household Kuruvila who settled in Thottaykkad, the third son Varki became the head of the Kuzhimattam branch and the youngest son Kuruvila became the head of the Thottaykkad branch. The other three ancestors had only daughters, who were married into the Padinjaremurei, Kadappoor, and Kannozhukam families respectively.',
+  about_para4_en: 'The Chirappurath family, one of the prominent families in Central Travancore, has two branches: Thottaykad and Kuzhimattom. Among the five sons of Chirappurath Kuruvila, the seventh generation descendant of Kalli household Kuruvila who settled in Thottaykad, the third son Varki became the head of the Kuzhimattom branch and the youngest son Kuruvila became the head of the Thottaykad branch. The other three ancestors had only daughters, who were married into the Padinjaremurei, Kadappoor, and Kannozhukam families respectively.',
 
   about_para5_ml: 'കുഴിമറ്റം ശാഖാ തലവൻ വർക്കിയുടെ മക്കളായ അഞ്ച് പിതാക്കന്മാരിലൂടെ നടുവിലേടം, കാരാണിക്കുളം, കിഴക്കേക്കുറ്റ്, ചേലചിറ, വല്യവീട്ടിൽ എന്നീ അഞ്ച് ഉപശാഖകളും,  തോട്ടയ്ക്കാട് ശാഖാ തലവൻ കുരുവിളയുടെ മക്കളായ ഏഴ് പിതാക്കന്മാരിലൂടെ തണുങ്ങുംപതിയ്ക്കൽ, കിഴക്കേമുറിയിൽ, ചിറത്തലയ്ക്കൽ, മറ്റത്തിൽ, തണുങ്ങുംപതിയ്ക്കൽ കിഴക്ക്, തണുങ്ങുംപതിയ്ക്കൽ പടിഞ്ഞാറ്, ചിറപ്പുറത്ത് എന്നീ ഏഴ് ഉപശാഖകളും ഉണ്ട്.',
-  about_para5_en: 'Through the five sons of Varki, the head of the Kuzhimattam branch, five sub-branches were formed: Naduvileddam, Karanikulam, Kizhakkekkurt, Chelachira, and Valyavettil. Through the seven sons of Kuruvila, the head of the Thottaykkad branch, seven sub-branches were formed: Thanukkumpathiykkol, Kizhakkemuriyil, Chirathalaykkol, Mattathil, Thanukkumpathiykkol East, Thanukkumpathiykkol West, and Chirappurath.',
+  about_para5_en: 'Through the five sons of Varki, the head of the Kuzhimattom branch, five sub-branches were formed: Naduviledam, Karanikulam, Kizhakkekkutt, Chelachira, and Valyavettil. Through the seven sons of Kuruvila, the head of the Thottaykad branch, seven sub-branches were formed: Thanugumpathickal, Kizhakkemuri, Chirathalaykkal, Mattathil, Thanugumpathickal East, Thanugumpathickal West, and Chirappurath.',
 
   about_para6_ml: 'തോട്ടയ്ക്കാട്, കുഴിമറ്റം പ്രദേശത്തും കൂടാതെ കുമളി, മലബാർ മേഖലകളിലും കേരളത്തിൻ്റെ മറ്റു പ്രദേശങ്ങളിലും ഇന്ത്യയുടെ വിവിധ സംസ്ഥാങ്ങളിലും ലോകത്തിൻ്റെ പല രാജ്യങ്ങളിലും ആയി മുന്നൂറിൽ അധികം കുടുംബങ്ങൾ പാർക്കുന്നു.',
-  about_para6_en: 'More than three hundred families reside in Thottaykkad, Kuzhimattam areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
+  about_para6_en: 'More than three hundred families reside in Thottaykad, Kuzhimattom areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
 
   // Priest page content
   faith_leadership_ml: 'വിശ്വാസത്തിന്റെ നേതൃത്വം',

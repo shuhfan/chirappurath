@@ -20,7 +20,7 @@ a {
 .hero {
   height: 26rem;
   background:
-    url("../images/banner.jpeg");
+    url("../images/banner.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -95,7 +95,7 @@ a {
   .hero {
   height: 8rem;
   background:
-    url("../images/banner.jpeg");
+    url("../images/banner.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -401,8 +401,10 @@ a {
 .marquee-section {
   background: linear-gradient(135deg, #d4af37 0%, #c9a43a 100%);
   padding: 20px 0;
-  margin: 20px 0;
   overflow: hidden;
+  position: sticky;
+  top: 2.7rem;
+  z-index: 1;
 }
 
 .marquee-container {
@@ -575,6 +577,19 @@ a {
 
 .navbar-nav .dropdown-toggle::after {
   display: none !important;
+}
+
+/* Dropdown Icon Styling */
+.navbar-nav .dropdown-icon {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 250ms ease;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.navbar-nav .dropdown-toggle[aria-expanded="true"] .dropdown-icon {
+  transform: rotate(180deg);
 }
 
 .navbar-nav .nav-link:hover {
@@ -814,7 +829,7 @@ a {
   .navbar-collapse {
     background: rgba(255,255,255,0.98);
     backdrop-filter: blur(40px);
-    padding: 20px 0;
+    /* padding: 20px 0; */
     border-radius: 0;
     margin-top: -31px;
     border: none;
@@ -824,7 +839,7 @@ a {
     overflow-y: auto;
     position: fixed;
     width: 100%;
-    top: 70px;
+    top: 80px;
     left: 0;
     right: 0;
     z-index: 1040;
