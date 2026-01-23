@@ -353,7 +353,7 @@ a {
 
 /* ===== MARQUEE SECTION ===== */
 .marquee-section {
-  background: linear-gradient(135deg, #d4af37 0%, #512626 100%);
+  background: linear-gradient(0deg, #d4af37 0%, #512626 100%);
   padding: 10px 0;
   overflow: hidden;
   position: sticky;
@@ -786,7 +786,6 @@ a {
   .navbar-collapse {
     background: rgba(255,255,255,0.98);
     backdrop-filter: blur(40px);
-    padding: 20px 0;
     border-radius: 0;
     margin-top: -31px;
     border: none;
@@ -796,7 +795,7 @@ a {
     overflow-y: auto;
     position: fixed;
     width: 100%;
-    top: 70px;
+    top: 80px;
     left: 0;
     right: 0;
     z-index: 1040;
