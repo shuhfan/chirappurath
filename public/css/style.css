@@ -20,7 +20,7 @@ a {
 .hero {
   height: 26rem;
   background:
-    url("../images/banner.jpeg");
+    url("../images/banner.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -95,7 +95,7 @@ a {
   .hero {
   height: 8rem;
   background:
-    url("../images/banner.jpeg");
+    url("../images/banner.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
