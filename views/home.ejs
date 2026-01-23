@@ -95,34 +95,39 @@
         <div class="news-sidebar">
           <h3 class="news-sidebar-title"><%= t('news_events') %></h3>
 
-          <% if (recentNews && recentNews.length > 0) { %>
-            <div class="news-list">
-              <% recentNews.forEach(news => { %>
-                <div class="news-item">
-                  <a href="/news/<%= news._id %>" class="news-link">
-                    <h4 class="news-item-title">
-                      <%= lang === 'en' ? (news.title_en || news.title_ml) : news.title_ml %>
-                    </h4>
-                    <p class="news-item-date">
-                      <%= new Date(news.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).replace(/ /g, '-') %>
-                    </p>
-                    <p class="news-item-excerpt">
-                      <%= lang === 'en' ? (news.excerpt_en || news.excerpt_ml) : news.excerpt_ml %>
-                    </p>
-                    <span class="news-read-more"><%= t('read_more') %></span>
-                  </a>
-                </div>
-              <% }); %>
-            </div>
-          <% } else { %>
-            <div class="no-news">
-              <p class="text-muted"><%= t('no_news') %></p>
-            </div>
-          <% } %>
+          <div class="news-list">
+            <div class="news-item">
+              <h4 class="news-item-title">ചിറപ്പുറത്ത് കുടുംബയോഗം 90-ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും</h4>
+              <p class="news-item-excerpt">സ്ഥലം : തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മാ ചർച്ച് പാരിഷ് ഹാൾ</p>
+              <p class="news-item-excerpt">തിയതി : 2026 ജനുവരി 26 തിങ്കൾ 3.30 PM മുതൽ</p>
 
-          <div class="text-center mt-4">
-            <a href="/news" class="btn btn-heritage"><%= t('view_all_news') %></a>
+              <h5 class="news-item-subtitle">അധ്യക്ഷൻ</h5>
+              <p class="news-item-excerpt">അഡ്വ. ബാജി. കെ. വർഗീസ്</p>
+
+              <h5 class="news-item-subtitle">നവതി സമ്മേളന ഉദ്ഘാടനം</h5>
+              <p class="news-item-excerpt">അഡ്വ ഫ്രാൻസിസ് ജോർജ്ജ് എം.പി</p>
+
+              <h5 class="news-item-subtitle">അനുഗ്രഹ പ്രഭാഷണം</h5>
+              <p class="news-item-excerpt">സന്തോഷ് ഫിലിപ്പ് (താബോർ മാർത്തോമ്മാ ഇടവക വികാരി , തോട്ടയ്ക്കാട് )</p>
+
+              <h5 class="news-item-subtitle">ആശംസകൾ</h5>
+              <p class="news-item-excerpt">വെരി: റവ: അപ്രേം റമ്പാച്ചൻ (രക്ഷാധികാരി)</p>
+              <p class="news-item-excerpt">റവ. ഫാ.ജേക്കബ് തോമസ് (രക്ഷാധികാരി)</p>
+              <p class="news-item-excerpt">റവ. ഫാ.ബിനു ജോസഫ് (രക്ഷാധികാരി)</p>
+
+              <h5 class="news-item-subtitle">കുടുംബ വെബ്സൈറ്റ് ഉദ്ഘാടനം</h5>
+              <p class="news-item-excerpt">ശ്രീ: ബേസിൽ ജോസഫ്</p>
+
+              <h5 class="news-item-subtitle">അനുമോദനവും ആദരവും</h5>
+              <p class="news-item-excerpt">50 വർഷം പൂർത്തീകരിച്ച ദമ്പതികളെയും , 75 വയസ് പൂർത്തീകരിച്ചവരെയും ആദരിക്കുന്നു</p>
+              <p class="news-item-excerpt">10, 12 ക്ലാസ്സുകളിൽ സ്റ്റേറ്റ് , CBSE, പരീക്ഷയിൽ കൂടുതൽ മാർക്ക് ലഭിച്ചവർക്ക് എവർറോളിംഗ് ട്രോഫി നൽകുന്നു</p>
+              <p class="news-item-excerpt">മറ്റുമേഖലകളിൽ ഉന്നത വിജയം നേടിയവരെ അനുമോദിക്കുന്നു</p>
+            </div>
           </div>
+
+          <!-- <div class="text-center mt-4">
+            <a href="/news" class="btn btn-heritage"><%= t('view_all_news') %></a>
+          </div> -->
         </div>
       </div>
     </div>
