@@ -123,12 +123,12 @@ a {
   margin-bottom: 10px;
 }
 
-.about-divider {
+/* .about-divider {
   width: 80px;
   height: 3px;
   background: #d4af37;
   margin: 0 auto 60px;
-}
+} */
 
 .about-section {
   position: relative;
@@ -400,9 +400,11 @@ a {
 /* ===== MARQUEE SECTION ===== */
 .marquee-section {
   background: linear-gradient(135deg, #d4af37 0%, #c9a43a 100%);
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 10px 0;
   overflow: hidden;
+  position: sticky;
+  top: 2.7rem;
+  z-index: 1;
 }
 
 .marquee-container {
@@ -438,7 +440,7 @@ a {
 /* Responsive Footer */
 @media (max-width: 1400px) {
   .footer-content {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     gap: 30px;
   }
 }
@@ -630,10 +632,8 @@ a {
 
   .navbar-nav .dropdown-menu .dropdown-header {
     color: #1a1a1a;
-    font-weight: 600;
     font-size: 14px;
     padding: 8px 18px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
@@ -791,12 +791,9 @@ a {
 
 .dropdown-menu .dropdown-header {
   color: #1a1a1a;
-  font-weight: 600;
   font-size: 14px;
   padding: 8px 18px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: 'Noto Serif Malayalam', serif;
 }
 
 .dropdown-menu .dropdown-divider {
@@ -956,7 +953,6 @@ a {
   color: #1a1a1a;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #d4af37;
   text-align: center;
 }
 
@@ -970,8 +966,8 @@ a {
   display: flex;
   align-items: center;
   padding: 15px;
-  background: #fff;
-  border-left: 3px solid #d4af37;
+  background: #ffeaea;
+  /* border-left: 3px solid #d4af37; */
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -1444,6 +1440,7 @@ a {
   margin-bottom: 15px;
   font-family: 'Noto Serif Malayalam', serif;
   color: #1a1a1a;
+  padding-left: 50px;
 }
 
 .history-subtitle {
@@ -1584,7 +1581,9 @@ a {
 
 @media (max-width: 768px) {
   .fathers-heading, .history-title {
-    font-size: 32px;
+    font-size: 25px;
+    padding-left: 0px;
+    text-align: center;
   }
 
   .father-image {
