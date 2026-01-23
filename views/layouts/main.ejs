@@ -215,11 +215,13 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <p class="footer-credit">Designed by <a href="https://keraladigitalpark.com" class="credit-link">Kerala Digital Park</a></p>
-    </div>
+    
   </div>
 </footer>
+<div class="footer-bottom">
+      <p class="footer-copyright">© <%= new Date().getFullYear() %> Chirappurath Kudumbayogam. All rights reserved.</p>
+      <p class="footer-credit">Designed by <a href="https://keraladigitalpark.com" class="credit-link">Kerala Digital Park</a></p>
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -239,34 +241,6 @@
     }
   }
 
-  // Simple language toggle
-  // let currentLanguage = localStorage.getItem('selectedLanguage') || 'ml';
-
-  // function changeLanguage(lang) {
-  //   if (event) {
-  //     event.preventDefault();
-  //   }
-    
-  //   currentLanguage = lang;
-  //   localStorage.setItem('selectedLanguage', lang);
-  //   updateLanguageDisplay();
-    
-  //   // Reload page to show stored translations
-  //   location.reload();
-  // }
-
-  // function updateLanguageDisplay() {
-  //   const displayText = currentLanguage === 'en' ? 'EN' : 'ML';
-  //   const currentSpan = document.getElementById('currentLanguage');
-  //   if (currentSpan) {
-  //     currentSpan.textContent = displayText;
-  //   }
-  // }
-
-  // Initialize on page load
-  // window.addEventListener('load', function() {
-  //   updateLanguageDisplay();
-  // });
 </script>
 
 </body>
