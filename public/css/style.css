@@ -533,6 +533,27 @@ a {
   display: none !important;
 }
 
+/* Main menu dropdown icon styling */
+.navbar-nav .dropdown-icon {
+  font-size: 12px;
+  color: #512626;
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 300ms ease, color 300ms ease;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item.dropdown > .nav-link:hover .dropdown-icon {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-item.dropdown > .nav-link[aria-expanded="true"] .dropdown-icon {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
 .navbar-nav .nav-link:hover {
   transform: none;
 }
