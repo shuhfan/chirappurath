@@ -8,8 +8,8 @@ const translations = {
   family_history_ml: 'കുടുംബചരിത്രം',
   family_history_en: 'Family History',
 
-  family_history_title_ml: 'ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം',
-  family_history_title_en: 'History of Chirappurath Family',
+  family_history_title_ml: 'വിശ്വാസവും, പാരമ്പര്യവും<br>ഒരുമിച്ച കുടുംബ ചരിത്രം',
+  family_history_title_en: 'Faith, Tradition<br>A United Family History',
 
   family_branches_ml: 'കുടുംബ ശാഖകൾ',
   family_branches_en: 'Family Branches',
