@@ -8,6 +8,9 @@ const translations = {
   family_history_ml: 'കുടുംബചരിത്രം',
   family_history_en: 'Family History',
 
+  family_history_title_ml: 'ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം',
+  family_history_title_en: 'History of Chirappurath Family',
+
   family_branches_ml: 'കുടുംബ ശാഖകൾ',
   family_branches_en: 'Family Branches',
 
@@ -19,7 +22,10 @@ const translations = {
   kuzhimattam_branch_en: 'Kuzhimattam Branch',
 
   thottakad_branch_ml: 'തോട്ടയ്ക്കാട് ശാഖ',
-  thottakad_branch_en: 'thottakad Branch',
+  thottakad_branch_en: 'Thottaykkad Branch',
+
+  thottaykkad_branch_ml: 'തോട്ടയ്ക്കാട് ശാഖ',
+  thottaykkad_branch_en: 'Thottaykkad Branch',
 
   // Buttons
   read_more_ml: 'കൂടുതൽ വായിക്കുക',
@@ -217,7 +223,71 @@ const translations = {
 
   // Marquee text
   marquee_text_ml: 'ചിറപ്പുറത്ത് കുടുംബം - വിശ്വാസം, പാരമ്പര്യം, കുടുംബബന്ധം',
-  marquee_text_en: 'Chirappurath Family - Faith, Tradition, Legacy'
+  marquee_text_en: 'Chirappurath Family - Faith, Tradition, Legacy',
+
+  // Event details
+  event_title_ml: 'ചിറപ്പുറത്ത് കുടുംബയോഗം 90-ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും',
+  event_title_en: 'Chirappurath Family Meeting 90th Anniversary and Navathi Closing Ceremony',
+
+  event_venue_label_ml: 'സ്ഥലം',
+  event_venue_label_en: 'Venue',
+
+  event_venue_ml: 'തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മാ ചർച്ച് പാരിഷ് ഹാൾ',
+  event_venue_en: 'Thottaykkad Tabor Mar Thoma Church Parish Hall',
+
+  event_date_label_ml: 'തിയതി',
+  event_date_label_en: 'Date',
+
+  event_date_ml: '2026 ജനുവരി 26 തിങ്കൾ 3.30 PM മുതൽ',
+  event_date_en: 'Monday, January 26, 2026 from 3.30 PM',
+
+  event_chairman_label_ml: 'അധ്യക്ഷൻ',
+  event_chairman_label_en: 'Chairman',
+
+  event_chairman_ml: 'അഡ്വ. ബാജി. കെ. വർഗീസ്',
+  event_chairman_en: 'Adv. Baji. K. Varghese',
+
+  event_inauguration_label_ml: 'നവതി സമ്മേളന ഉദ്ഘാടനം',
+  event_inauguration_label_en: 'Navathi Conference Inauguration',
+
+  event_inauguration_ml: 'അഡ്വ ഫ്രാൻസിസ് ജോർജ്ജ് എം.പി',
+  event_inauguration_en: 'Adv. Francis George M.P',
+
+  event_blessing_label_ml: 'അനുഗ്രഹ പ്രഭാഷണം',
+  event_blessing_label_en: 'Blessing Speech',
+
+  event_blessing_ml: 'സന്തോഷ് ഫിലിപ്പ് (താബോർ മാർത്തോമ്മാ ഇടവക വികാരി , തോട്ടയ്ക്കാട് )',
+  event_blessing_en: 'Santhosh Philip (Tabor Mar Thoma Parish Vicar, Thottaykkad)',
+
+  event_wishes_label_ml: 'ആശംസകൾ',
+  event_wishes_label_en: 'Greetings',
+
+  event_wishes_1_ml: 'വെരി: റവ: അപ്രേം റമ്പാച്ചൻ (രക്ഷാധികാരി)',
+  event_wishes_1_en: 'Very Rev. Aprem Rambachan (Patron)',
+
+  event_wishes_2_ml: 'റവ. ഫാ.ജേക്കബ് തോമസ് (രക്ഷാധികാരി)',
+  event_wishes_2_en: 'Rev. Fr. Jacob Thomas (Patron)',
+
+  event_wishes_3_ml: 'റവ. ഫാ.ബിനു ജോസഫ് (രക്ഷാധികാരി)',
+  event_wishes_3_en: 'Rev. Fr. Binu Joseph (Patron)',
+
+  event_website_label_ml: 'കുടുംബ വെബ്സൈറ്റ് ഉദ്ഘാടനം',
+  event_website_label_en: 'Family Website Inauguration',
+
+  event_website_ml: 'ശ്രീ: ബേസിൽ ജോസഫ്',
+  event_website_en: 'Sri. Basil Joseph',
+
+  event_recognition_label_ml: 'അനുമോദനവും ആദരവും',
+  event_recognition_label_en: 'Recognition and Honors',
+
+  event_recognition_1_ml: '50 വർഷം പൂർത്തീകരിച്ച ദമ്പതികളെയും , 75 വയസ് പൂർത്തീകരിച്ചവരെയും ആദരിക്കുന്നു',
+  event_recognition_1_en: 'Honoring couples who have completed 50 years of marriage and those who have completed 75 years of age',
+
+  event_recognition_2_ml: '10, 12 ക്ലാസ്സുകളിൽ സ്റ്റേറ്റ് , CBSE, പരീക്ഷയിൽ കൂടുതൽ മാർക്ക് ലഭിച്ചവർക്ക് എവർറോളിംഗ് ട്രോഫി നൽകുന്നു',
+  event_recognition_2_en: 'Presenting Ever Rolling Trophy to those who scored high marks in State and CBSE examinations in classes 10 and 12',
+
+  event_recognition_3_ml: 'മറ്റുമേഖലകളിൽ ഉന്നത വിജയം നേടിയവരെ അനുമോദിക്കുന്നു',
+  event_recognition_3_en: 'Recognizing those who achieved excellence in other fields'
 };
 
 // Helper function to get translated text

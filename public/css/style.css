@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding-top: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: #f7f3ee;
   color: #2c2c2c;
 }
@@ -110,7 +110,7 @@ a {
 }
 
 .lang-btn {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   color: #555;
   text-decoration: none;
@@ -285,11 +285,16 @@ a {
   padding-left: 22px;
 }
 
+.submenu-items .dropdown-item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
 .dropdown-menu .dropdown-header {
   color: #1a1a1a;
   font-size: 14px;
   padding: 8px 18px;
   letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .dropdown-menu .dropdown-divider {
@@ -321,7 +326,7 @@ a {
 
 /* ===== MARQUEE SECTION ===== */
 .marquee-section {
-  background: linear-gradient(0deg, #d4af37 0%, #512626 100%);
+  background: linear-gradient(135deg, #d4af37 0%, #c9a43a 100%);
   padding: 10px 0;
   overflow: hidden;
   position: sticky;
@@ -348,6 +353,7 @@ a {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ===== HISTORY SECTION ===== */
@@ -365,14 +371,15 @@ a {
 .history-title {
   font-size: 42px;
   margin-bottom: 15px;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #512626;
-  padding-left: 50px;
+  padding-left: 30px;
   font-weight: 600;
+  text-align: left;
 }
 
 .history-subtitle {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
   color: #d4af37;
   margin-bottom: 50px;
@@ -381,18 +388,20 @@ a {
 }
 
 .history-content {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.8;
   color: #333;
-  text-align: justify;
+  text-align: left;
   padding: 30px 20px;
   border-radius: 8px;
   word-spacing: -1px;
+  font-style: italic;
 }
 
 .history-content p {
   margin-bottom: 20px;
+  font-style: italic;
 }
 
 .history-content p:last-child {
@@ -411,7 +420,7 @@ a {
 }
 
 .news-sidebar-title {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: #1a1a1a;
@@ -449,7 +458,7 @@ a {
 }
 
 .news-item-title {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #2c2c2c;
@@ -465,11 +474,11 @@ a {
   font-size: 12px;
   color: #999;
   margin-bottom: 8px;
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .news-item-subtitle {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #512626;
@@ -483,7 +492,7 @@ a {
 }
 
 .news-item-excerpt {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   color: #555;
   line-height: 1.6;
@@ -491,7 +500,7 @@ a {
 }
 
 .news-read-more {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
   color: #d4af37;
   font-weight: 600;
@@ -509,7 +518,7 @@ a {
 }
 
 .no-news p {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   color: #999;
 }
@@ -520,15 +529,17 @@ a {
 }
 
 .section-heading {
-  font-size: 38px;
+  font-size: 32px;
   margin-bottom: 50px;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #ffffff;
   background-color: #c9a43a;
+  font-weight: 700;
+  padding: 20px 0;
 }
 
 .branch-main-heading {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: #ffffff;
@@ -548,7 +559,7 @@ a {
 .branch-item {
   /* display: flex; */
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   background: #512626;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -577,8 +588,8 @@ a {
 }
 
 .branch-name {
-  font-family: 'Noto Serif Malayalam', serif;
-  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
   color: #ffffff;
   font-weight: 500;
 }
@@ -603,12 +614,12 @@ a {
 .fathers-heading {
   font-size: 42px;
   margin-bottom: 15px;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #512626;
 }
 
 .fathers-intro {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.8;
   color: #333;
@@ -663,7 +674,7 @@ a {
 }
 
 .father-name {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: #1a1a1a;
@@ -672,7 +683,7 @@ a {
 }
 
 .father-info {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   color: #555;
   line-height: 1.8;
@@ -713,13 +724,13 @@ a {
 }
 
 .section-title {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .section-text {
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.9;
   color: #333;
@@ -754,7 +765,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
 }
 
@@ -782,7 +793,7 @@ a {
   background: rgba(0,0,0,0.6);
   color: #fff;
   font-size: 14px;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ===== FOOTER ===== */
@@ -814,7 +825,7 @@ a {
 }
 
 .footer-church-name {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a1a;
   font-size: 16px;
   font-weight: 600;
@@ -826,6 +837,7 @@ a {
   color: rgba(26,26,26,0.7);
   line-height: 1.6;
   margin: 10px 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .footer-social {
@@ -866,7 +878,7 @@ a {
   font-size: 16px;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .footer-links {
@@ -884,7 +896,7 @@ a {
   text-decoration: none;
   font-size: 14px;
   transition: all 250ms ease;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .footer-links a:hover {
@@ -893,28 +905,42 @@ a {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(212,175,55,0.2);
-  padding-top: 20px;
-  text-align: center;
+  background: linear-gradient(135deg, #d4af37 0%, #c9a43a 100%);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-copyright {
-  font-size: 13px;
-  color: rgba(26,26,26,0.8);
-  margin: 0 0 8px 0;
-  font-family: 'Noto Serif Malayalam', serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  padding-left: 40px;
 }
 
 .footer-credit {
-  font-size: 12px;
-  color: rgba(26,26,26,0.6);
+  font-size: 14px;
+  color: #1a1a1a;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  padding-right: 40px;
 }
 
 .credit-link {
-  color: #d4af37;
+  color: #512626;
   text-decoration: none;
+  font-weight: 600;
+}
+
+.credit-link:hover {
+  color: #1a1a1a;
+  text-decoration: underline;
 }
 
 .credit-link:hover {
@@ -1029,7 +1055,7 @@ a {
 }
 
 .inauguration-title {
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 56px;
   font-weight: 700;
   color: #ffffff;
@@ -1061,7 +1087,7 @@ a {
 }
 
 .inauguration-subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
   color: #d4af37;
   letter-spacing: 2px;
@@ -1204,6 +1230,7 @@ a {
     color: rgba(26,26,26,0.85);
     padding: 10px 18px;
     font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     transition: all 250ms ease;
   }
 
@@ -1218,6 +1245,7 @@ a {
     font-size: 14px;
     padding: 8px 18px;
     letter-spacing: 0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .navbar-nav .dropdown-menu .dropdown-divider {
@@ -1232,6 +1260,10 @@ a {
 
   .navbar-nav .dropdown-menu .submenu-items.active {
     display: block;
+  }
+
+  .navbar-nav .dropdown-menu .submenu-items .dropdown-item {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
   }
 
   .navbar-nav .dropdown-menu .submenu-header {
@@ -1360,6 +1392,7 @@ a {
     padding: 12px 25px;
     font-size: 13px;
     color: rgba(26,26,26,0.85);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .dropdown-menu .dropdown-item:hover {
@@ -1371,10 +1404,15 @@ a {
     padding: 14px 25px;
     margin-top: 8px;
     margin-bottom: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .dropdown-menu .dropdown-divider {
     margin: 8px 0;
+  }
+
+  .submenu-items .dropdown-item {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
   }
 }
 
@@ -1492,7 +1530,7 @@ a {
 /* Small Mobile */
 @media (max-width: 576px) {
   .section-heading {
-    font-size: 33px;
+    font-size: 28px;
   }
 
   .footer-content {
@@ -1512,5 +1550,22 @@ a {
 
   .footer-links a {
     font-size: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .footer-copyright {
+    padding-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer-credit {
+    padding-right: 0;
+    text-align: center;
   }
 }
