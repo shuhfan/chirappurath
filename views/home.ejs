@@ -1,4 +1,4 @@
-<div id="ribbonOverlay">
+﻿<div id="ribbonOverlay">
   <div class="inauguration-container">
 
     <!-- Elegant Curtains -->
@@ -60,9 +60,9 @@
 <!-- ===== FAMILY HISTORY SECTION WITH NEWS ===== -->
 <section class="history-section">
   <div class="container">
-    <h2 class="history-title">History of  Chirappurath kudumbam</h2>
+    <h2 class="history-title">ചിറപ്പുറത്ത് കുടുംബത്തിൻ്റെ ചരിത്രം</h2>
 
-    <div class="row">
+    <div class="row g-3">
       <!-- Left Column: Family History -->
       <div class="col-lg-8">
         <div class="history-content">
@@ -145,14 +145,15 @@
 
           <% kuzhimattamBranches.forEach((name, index) => { %>
             <div class="branch-item">
-              <!-- <span class="branch-number"><%= index + 1 %></span> -->
               <span class="branch-name"><%= t(name) %></span>
             </div>
           <% }) %>
+          <div class="branch-item branch-item-dummy branch-name">⭐⭐⭐</div>
+          <div class="branch-item branch-item-dummy branch-name">⭐⭐⭐</div>
         </div>
       </div>
 
-      <!-- Thottaykkad Branch -->
+      <!-- thottakad Branch -->
       <div class="col-lg-6">
         <div class="branch-main-heading"><%= t('thottaykkad_branch') %></div>
         <div class="branch-list">
