@@ -491,9 +491,10 @@ a {
   font-size: 14px;
   font-weight: 600;
   color: #512626;
-  margin: 12px 0 4px 0;
+  margin: 12px 0 10px 0;
   padding-top: 8px;
   border-top: 1px dashed rgba(212, 175, 55, 0.3);
+  line-height: 2;
 }
 
 .news-item-subtitle:first-of-type {

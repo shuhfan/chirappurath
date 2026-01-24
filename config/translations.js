@@ -174,7 +174,7 @@ const translations = {
   about_para5_en: 'Through the five sons of Varki, the head of the Kuzhimattam branch, five sub-branches were formed: Naduvileddam, Karanikulam, Kizhakkekkutt, Chelachira, and Valyavettil. Through the seven sons of Kuruvila, the head of the Thottakad branch, seven sub-branches were formed: Thanangumpathickal, Kizhakkemuri, Chirathalakkal, Mattathil, Thanangumpathickal East, Thanangumpathickal West, and Chirappurath.',
 
   about_para6_ml: 'തോട്ടയ്ക്കാട്, കുഴിമറ്റം പ്രദേശത്തും കൂടാതെ കുമളി, മലബാർ മേഖലകളിലും കേരളത്തിൻ്റെ മറ്റു പ്രദേശങ്ങളിലും ഇന്ത്യയുടെ വിവിധ സംസ്ഥാങ്ങളിലും ലോകത്തിൻ്റെ പല രാജ്യങ്ങളിലും ആയി    അഞ്ഞൂറിൽ അധികം കുടുംബങ്ങൾ പാർക്കുന്നു.',
-  about_para6_en: 'More than three hundred families reside in Thottakad, Kuzhimattam areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
+  about_para6_en: 'More than five hundred families reside in Thottakad, Kuzhimattam areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
 
   // Priest page content
   faith_leadership_ml: 'വിശ്വാസത്തിൻ്റെ നേതൃത്വം',
@@ -250,7 +250,7 @@ const translations = {
   event_chairman_label_ml: 'അധ്യക്ഷൻ',
   event_chairman_label_en: 'Chairman',
 
-  event_chairman_ml: 'അഡ്വ. ബാജി. കെ. വർഗീസ് (പ്രസിഡന്റ്)',
+  event_chairman_ml: 'അഡ്വ. ബാജി. കെ. വർഗീസ് (പ്രസിഡൻ്റ്)',
   event_chairman_en: 'Adv. Baji. K. Varghese (President)',
 
   event_inauguration_label_ml: 'നവതി സമ്മേളന ഉദ്ഘാടനം',
