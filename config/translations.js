@@ -106,6 +106,9 @@ const translations = {
   chirappurath_ml: 'ചിറപ്പുറത്ത്',
   chirappurath_en: 'Chirappurath',
 
+  vilanguparakkal_ml: 'വിലങ്ങുപാറക്കൽ',
+  vilanguparakkal_en: 'Vilanguparakkal',
+
   // News categories
   all_news_ml: 'എല്ലാ വാർത്തകളും',
   all_news_en: 'All News',
@@ -176,6 +179,9 @@ const translations = {
   // Priest page content
   faith_leadership_ml: 'വിശ്വാസത്തിൻ്റെ നേതൃത്വം',
   faith_leadership_en: 'Faith Leadership',
+
+  Through_the_gospel_path_ml: 'സുവിശേഷ പാതയിലൂടെ',
+  Through_the_gospel_path_en: 'Through the Gospel Path',
 
   born_ml: 'ജനനം',
   born_en: 'Born',
