@@ -7,6 +7,11 @@ body {
   color: #2c2c2c;
 }
 
+/* Hide mobile-only elements on desktop */
+.mobile-only {
+  display: none;
+}
+
 main {
   margin-top: 0;
   padding-top: 0;
@@ -1425,6 +1430,11 @@ a {
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Show mobile-only elements */
+  .mobile-only {
+    display: inline;
+  }
+
   .about-title {
     font-size: 32px;
   }
@@ -1435,9 +1445,10 @@ a {
 
   .fathers-heading,
   .history-title {
-    font-size: 25px;
+    font-size: 22px;
     padding-left: 0px;
     text-align: center;
+    line-height: 1.5;
   }
 
   .father-image {
@@ -1449,10 +1460,13 @@ a {
   }
 
   .history-content {
-    font-size: 16px;
-    padding: 30px 20px;
-    line-height: 1.8;
+    font-size: 15px;
+    padding: 20px 15px;
+    line-height: 1.7;
     text-align: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
   }
 
   .fathers-intro {

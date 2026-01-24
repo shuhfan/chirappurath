@@ -174,7 +174,7 @@ const translations = {
   about_para6_en: 'More than three hundred families reside in thottakad, Kuzhimattam areas, as well as in Kumily, Malabar regions, other parts of Kerala, various states of India, and many countries around the world.',
 
   // Priest page content
-  faith_leadership_ml: 'വിശ്വാസത്തിന്റെ നേത്ര്യതും',
+  faith_leadership_ml: 'വിശ്വാസത്തിൻ്റെ നേതൃത്വം',
   faith_leadership_en: 'Faith Leadership',
 
   born_ml: 'ജനനം',
@@ -238,8 +238,8 @@ const translations = {
   event_date_label_ml: 'തിയതി',
   event_date_label_en: 'Date',
 
-  event_date_ml: '2026 ജനുവരി 26 തിങ്കൾ 3.30 PM മുതൽ',
-  event_date_en: 'Monday, January 26, 2026 from 3.30 PM',
+  event_date_ml: '2026 ജനുവരി 26 തിങ്കൾ <br class="mobile-only">3.30 PM മുതൽ',
+  event_date_en: 'Monday, January 26, 2026 <br class="mobile-only">from 3.30 PM',
 
   event_chairman_label_ml: 'അധ്യക്ഷൻ',
   event_chairman_label_en: 'Chairman',
@@ -274,8 +274,8 @@ const translations = {
   event_website_label_ml: 'കുടുംബ വെബ്സൈറ്റ് ഉദ്ഘാടനം',
   event_website_label_en: 'Family Website Inauguration',
 
-  event_website_ml: 'ശ്രീ: ബേസിൽ ജോസഫ്',
-  event_website_en: 'Sri. Basil Joseph',
+  event_website_ml: 'ശ്രീ: ബേസിൽ ജോസഫ് ( മരുമകൻ, സുപ്രസിദ്ധ ചലച്ചിത്ര നടനും, സംവിധായകനും )',
+  event_website_en: 'Sri. Basil Joseph (Son-in-law, renowned film actor and director)',
 
   event_recognition_label_ml: 'അനുമോദനവും ആദരവും',
   event_recognition_label_en: 'Recognition and Honors',
