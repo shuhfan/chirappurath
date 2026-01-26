@@ -208,13 +208,13 @@ a {
 }
 
 .navbar-nav .nav-item.dropdown > .nav-link:hover .dropdown-icon {
-  color: #fff;
+  color: #512626;
   transform: translateY(-2px);
 }
 
 .navbar-nav .nav-item.dropdown > .nav-link[aria-expanded="true"] .dropdown-icon {
   transform: rotate(180deg);
-  color: #fff;
+  color: #512626;
 }
 
 .navbar-nav .nav-link:hover {
