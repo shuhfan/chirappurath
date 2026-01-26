@@ -45,9 +45,9 @@
 
       <!-- Custom Language Switcher -->
       <div class="language-switcher">
-        <a href="/lang/ml" class="lang-btn <%= (typeof lang === 'undefined' || lang === 'ml') ? 'active' : '' %>" id="btn-ml">മലയാളം</a>
+        <a href="#" onclick="switchLang(event, 'ml')" class="lang-btn <%= (typeof lang === 'undefined' || lang === 'ml') ? 'active' : '' %>" id="btn-ml">മലയാളം</a>
         <span class="lang-divider">|</span>
-        <a href="/lang/en" class="lang-btn <%= (typeof lang !== 'undefined' && lang === 'en') ? 'active' : '' %>" id="btn-en">English</a>
+        <a href="#" onclick="switchLang(event, 'en')" class="lang-btn <%= (typeof lang !== 'undefined' && lang === 'en') ? 'active' : '' %>" id="btn-en">English</a>
       </div>
     </div>
   </div>
@@ -236,12 +236,28 @@
 <script>
   GLightbox();
 
-  // Submenu toggle function
+  // Language switch - stays on current page
+  function switchLang(e, lang) {
+    e.preventDefault();
+    window.location.href = '/lang/' + lang + '?redirect=' + encodeURIComponent(window.location.pathname + window.location.search);
+  }
+
+  // Submenu toggle function - closes other submenus first
   function toggleSubmenu(event) {
     event.preventDefault();
     event.stopPropagation();
-    const header = event.target;
+    const header = event.target.closest('.submenu-header');
+    if (!header) return;
+    
     const submenu = header.parentElement.nextElementSibling;
+    
+    // Close all other submenus first
+    document.querySelectorAll('.submenu-items.active').forEach(function(item) {
+      if (item !== submenu) {
+        item.classList.remove('active');
+        item.previousElementSibling.querySelector('.submenu-header').classList.remove('active');
+      }
+    });
     
     if (submenu && submenu.classList.contains('submenu-items')) {
       submenu.classList.toggle('active');

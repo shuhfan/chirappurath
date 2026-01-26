@@ -1426,6 +1426,28 @@ a {
   .submenu-items .dropdown-item {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
   }
+
+  /* Mobile dropdown icon visibility */
+  .navbar-nav .dropdown-icon {
+    display: inline-block !important;
+    float: right;
+    margin-top: 3px;
+  }
+
+  /* Mobile submenu - hidden by default */
+  .submenu-items {
+    display: none;
+    padding-left: 15px;
+  }
+
+  .submenu-items.active {
+    display: block;
+  }
+
+  /* Rotate icon when submenu is open */
+  .submenu-header.active .submenu-icon {
+    transform: rotate(180deg);
+  }
 }
 
 /* Mobile */

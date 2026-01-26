@@ -3,11 +3,11 @@ const router = express.Router();
 const pageController = require('../controllers/pageController');
 const newsController = require('../controllers/newsController');
 
-// lang switch
+// lang switch - uses redirect param to stay on current page
 router.get('/lang/:type', (req,res)=>{
   req.session.lang = (req.params.type === 'en') ? 'en' : 'ml';
-  const referer = req.get('Referer') || '/';
-  res.redirect(referer);
+  const redirect = req.query.redirect || '/';
+  res.redirect(redirect);
 });
 
 router.get('/', pageController.home);
