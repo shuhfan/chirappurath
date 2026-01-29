@@ -235,68 +235,67 @@ const translations = {
   event_title_ml: 'ചിറപ്പുറത്ത് കുടുംബയോഗം 90-ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും',
   event_title_en: 'Chirappurath Family Meeting 90th Anniversary and Navathi Closing Ceremony',
 
-  event_venue_label_ml: 'സ്ഥലം',
-  event_venue_label_en: 'Venue',
+  event_full_ml: `
+<strong>തോട്ടയ്ക്കാട്</strong> – ചിറപ്പുറത്ത് കുടുംബയോഗം 90ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും 2026 ജനുവരി 26 തിങ്കളാഴ്ച,
+തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മ പാരീഷ് ഹാളിൽ വച്ച് നടത്തപ്പെട്ടു.<br><br>
 
-  event_venue_ml: 'തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മാ ചർച്ച് പാരിഷ് ഹാൾ',
-  event_venue_en: 'Thottakad Tabor Mar Thoma Church Parish Hall',
+വൈകുന്നേരം 4 മണിക്ക് റവ. ഫാ. ബിനു ജോസഫ് അച്ചന്റെ പ്രാർത്ഥനയോടെ സമ്മേളനം ആരംഭിച്ചു.
+യോഹാൻ റ്റോം ചിറപ്പുറത്ത്, എൽസാ മാണി, മർഷ കെ. ജർലിൻ എന്നിവർ ചേർന്ന് പ്രാർത്ഥനാഗാനം ആലപിച്ചു.<br><br>
 
-  event_date_label_ml: 'തിയതി',
-  event_date_label_en: 'Date',
+റ്റി. റ്റി. തോമസ് ബൈബിൾ റീഡിങ് നടത്തി.
+ബിനു എബ്രഹാം അനുശോചന പ്രമേയം അവതരിപ്പിച്ചു.<br><br>
 
-  event_date_ml: '2026 ജനുവരി 26 തിങ്കൾ 3.30 PM മുതൽ',
-  event_date_en: 'Monday, January 26, 2026 from 3.30 PM',
+കുടുംബയോഗം പ്രസിഡന്റ് ബാജി കെ. വർഗീസ് അധ്യക്ഷത വഹിച്ചു.
+റവ. സന്തോഷ് ഫിലിപ്പ് നവതി സമാപന സമ്മേളനം ഉദ്ഘാടനം ചെയ്ത് അനുഗ്രഹ പ്രഭാഷണം നടത്തി.
+ഫ്രാൻസിസ് ജോർജ് എം. പി. ആശംസകൾ നേർന്നു.<br><br>
 
-  event_chairman_label_ml: 'അധ്യക്ഷൻ',
-  event_chairman_label_en: 'Chairman',
+300-ൽ അധികം കുടുംബാംഗങ്ങൾ പങ്കെടുത്തു.
+സ്നേഹ വിരുന്നോടുകൂടി രാത്രി 9.00 ന് സമ്മേളനം സമാപിച്ചു.
+`,
 
-  event_chairman_ml: 'അഡ്വ. ബാജി. കെ. വർഗീസ് (പ്രസിഡൻ്റ്)',
-  event_chairman_en: 'Adv. Baji. K. Varghese (President)',
+  event_full_en: `
+<strong>Thottakkad</strong> – The 90th Anniversary and Navathi Closing Ceremony of the
+Chirappurath Family Association was held on Monday, January 26, 2026,
+at the Thottakkad Tabor Mar Thoma Parish Hall.<br><br>
 
-  event_inauguration_label_ml: 'നവതി സമ്മേളന ഉദ്ഘാടനം',
-  event_inauguration_label_en: 'Navathi Conference Inauguration',
+The meeting began at 4:00 PM with a prayer led by Rev. Fr. Binu Joseph.
+Prayer songs were sung by Yohan Tom Chirappurath, Elsa Mani, and Marsha K. Jerlin.
+Bible reading was done by T. T. Thomas.
+Binu Abraham presented the condolence message remembering those who passed away
+during the last report year.<br><br>
 
-  event_inauguration_ml: 'അഡ്വ ഫ്രാൻസിസ് ജോർജ്ജ് എം.പി',
-  event_inauguration_en: 'Adv. Francis George M.P',
+The meeting was chaired by Family Association President Baji K. Varghese.
+Rev. Santhosh Philip, Vicar of Tabor Mar Thoma Parish, inaugurated the Navathi
+Closing Ceremony and delivered the blessing speech.
+Francis George M.P. conveyed his greetings.
+Very Rev. Aprem Ramban, Rev. Fr. Jacob Thomas, and Rev. Fr. Binu Joseph
+also delivered felicitation speeches.<br><br>
 
-  event_blessing_label_ml: 'അനുഗ്രഹ പ്രഭാഷണം',
-  event_blessing_label_en: 'Blessing Speech',
+Very Rev. Aprem Ramban, who was elevated to the Ramban position,
+and Rev. Fr. Jacob Thomas and Rev. Fr. Binu Joseph, who completed 25 years
+of priestly service, were honored with shawls.<br><br>
 
-  event_blessing_ml: 'സന്തോഷ് ഫിലിപ്പ് (താബോർ മാർത്തോമ്മാ ഇടവക വികാരി , തോട്ടയ്ക്കാട് )',
-  event_blessing_en: 'Santhosh Philip (Tabor Mar Thoma Parish Vicar, Thottakad)',
+The family website launched as part of the Navathi celebrations
+was inaugurated online by Basil Joseph, renowned actor and director
+and son-in-law of the Chirappurath family.<br><br>
 
-  event_wishes_label_ml: 'ആശംസകൾ',
-  event_wishes_label_en: 'Greetings',
+Couples who completed 50 years of married life,
+members who completed 75 years of age,
+and students who secured high marks in State and CBSE examinations
+in classes 10 and 12 were honored.
+Songs were performed by Timothy Tom and Aleena Elsa Kuruvila.<br><br>
 
-  event_wishes_1_ml: 'വെരി: റവ: അപ്രേം റമ്പാച്ചൻ (രക്ഷാധികാരി)',
-  event_wishes_1_en: 'Very Rev. Aprem Rambachan (Patron)',
+General Secretary Jerlin K. Mathew presented the annual report,
+and Treasurer Joseph Abraham presented the financial statement.
+Joint Secretary K. V. Varghese welcomed the gathering,
+and Vice President Sam C. John delivered the vote of thanks.<br><br>
 
-  event_wishes_2_ml: 'റവ. ഫാ.ജേക്കബ് തോമസ് (രക്ഷാധികാരി)',
-  event_wishes_2_en: 'Rev. Fr. Jacob Thomas (Patron)',
+More than 300 family members participated.
+After the public meeting, a musical program and mimicry parade were held.
+The meeting concluded at 9:00 PM with a fellowship dinner.
+`,
 
-  event_wishes_3_ml: 'റവ. ഫാ.ബിനു ജോസഫ് (രക്ഷാധികാരി)',
-  event_wishes_3_en: 'Rev. Fr. Binu Joseph (Patron)',
 
-  event_website_label_ml: 'കുടുംബ വെബ്സൈറ്റ് ഉദ്ഘാടനം',
-  event_website_label_en: 'Family Website Inauguration',
-
-  event_website_ml: 'ശ്രീ: ബേസിൽ ജോസഫ് ( മരുമകൻ, സുപ്രസിദ്ധ ചലച്ചിത്ര നടനും, സംവിധായകനും )',
-  event_website_en: 'Sri. Basil Joseph (Son-in-law, renowned film actor and director)',
-
-  event_recognition_label_ml: 'അനുമോദനവും ആദരവും',
-  event_recognition_label_en: 'Recognition and Honors',
-
-  event_recognition_1_ml: '50 വർഷം പൂർത്തീകരിച്ച ദമ്പതികളെയും , 75 വയസ് പൂർത്തീകരിച്ചവരെയും ആദരിക്കുന്നു',
-  event_recognition_1_en: 'Honoring couples who have completed 50 years of marriage and those who have completed 75 years of age',
-
-  event_recognition_2_ml: '10, 12 ക്ലാസ്സുകളിൽ സ്റ്റേറ്റ് , CBSE, പരീക്ഷയിൽ കൂടുതൽ മാർക്ക് ലഭിച്ചവർക്ക് എവർറോളിംഗ് ട്രോഫി നൽകുന്നു',
-  event_recognition_2_en: 'Presenting Ever Rolling Trophy to those who scored high marks in State and CBSE examinations in classes 10 and 12',
-
-  event_recognition_3_ml: 'ഗാനമേള, മിമിക്സ് പരേഡ് ',
-  event_recognition_3_en: 'Singing competition, Mimicry parade',
-
-  event_recognition_4_ml: 'സ്നേഹവിരുന്ന് ',
-  event_recognition_4_en: 'Love feast',
 };
 
 // Helper function to get translated text
