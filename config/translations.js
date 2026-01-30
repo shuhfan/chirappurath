@@ -236,22 +236,50 @@ const translations = {
   event_title_en: 'Chirappurath Family Meeting 90th Anniversary and Navathi Closing Ceremony',
 
   event_full_ml: `
-<strong>തോട്ടയ്ക്കാട്</strong> – ചിറപ്പുറത്ത് കുടുംബയോഗം 90ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും 2026 ജനുവരി 26 തിങ്കളാഴ്ച,
+<strong>തോട്ടയ്ക്കാട്</strong> ▪️ ചിറപ്പുറത്ത് കുടുംബയോഗം 90ാം വാർഷികവും നവതി സമാപന സമ്മേളനവും 2026 ജനുവരി 26 തിങ്കളാഴ്ച,
 തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മ പാരീഷ് ഹാളിൽ വച്ച് നടത്തപ്പെട്ടു.<br><br>
 
-വൈകുന്നേരം 4 മണിക്ക് റവ. ഫാ. ബിനു ജോസഫ് അച്ചന്റെ പ്രാർത്ഥനയോടെ സമ്മേളനം ആരംഭിച്ചു.
+വൈകുന്നേരം 4 മണിക്ക് റവ. ഫാ. ബിനു ജോസഫ് അച്ചന്റെ പ്രാർത്ഥനയോടുകൂടി സമ്മേളനം ആരംഭിച്ചു.
 യോഹാൻ റ്റോം ചിറപ്പുറത്ത്, എൽസാ മാണി, മർഷ കെ. ജർലിൻ എന്നിവർ ചേർന്ന് പ്രാർത്ഥനാഗാനം ആലപിച്ചു.<br><br>
 
 റ്റി. റ്റി. തോമസ് ബൈബിൾ റീഡിങ് നടത്തി.
+കഴിഞ്ഞ റിപ്പോർട്ട് വർഷത്തിൽ നമ്മിൽ നിന്നും വേർപെട്ടുപോയവരെ അനുസ്മരിച്ചുകൊണ്ട്
 ബിനു എബ്രഹാം അനുശോചന പ്രമേയം അവതരിപ്പിച്ചു.<br><br>
 
-കുടുംബയോഗം പ്രസിഡന്റ് ബാജി കെ. വർഗീസ് അധ്യക്ഷത വഹിച്ചു.
-റവ. സന്തോഷ് ഫിലിപ്പ് നവതി സമാപന സമ്മേളനം ഉദ്ഘാടനം ചെയ്ത് അനുഗ്രഹ പ്രഭാഷണം നടത്തി.
+കുടുംബയോഗം പ്രസിഡന്റ് ബാജി കെ. വർഗീസ് അധ്യക്ഷത വഹിച്ച യോഗത്തിൽ,
+തോട്ടയ്ക്കാട് താബോർ മാർത്തോമ്മ ഇടവക വികാരി റവ. സന്തോഷ് ഫിലിപ്പ്
+നവതി സമാപന സമ്മേളനം ഉദ്ഘാടനം ചെയ്ത് അനുഗ്രഹ പ്രഭാഷണം നടത്തി.
 ഫ്രാൻസിസ് ജോർജ് എം. പി. ആശംസകൾ നേർന്നു.<br><br>
 
-300-ൽ അധികം കുടുംബാംഗങ്ങൾ പങ്കെടുത്തു.
+കുടുംബയോഗം രക്ഷാധികാരികളായ വെരി. റവ. അപ്രേം റമ്പാൻ,
+റവ. ഫാ. ജേക്കബ് തോമസ്, റവ. ഫാ. ബിനു ജോസഫ് എന്നിവർ
+ആശംസാ പ്രസംഗങ്ങൾ നടത്തി.<br><br>
+
+റമ്പാൻ പദവിയിലേക്ക് ഉയർത്തപ്പെട്ട വെരി. റവ. അപ്രേം റമ്പാനെയും,
+പട്ടത്വ ശുശ്രൂഷയിൽ 25 വർഷം പൂർത്തിയാക്കിയ
+റവ. ഫാ. ജേക്കബ് തോമസ്, റവ. ഫാ. ബിനു ജോസഫ് എന്നിവരെയും
+പൊന്നാട അണിയിച്ച് ആദരിച്ചു.<br><br>
+
+കുടുംബയോഗം നവതിയോടനുബന്ധിച്ച് ആരംഭിച്ച വെബ്സൈറ്റിന്റെ ഉദ്ഘാടനം,
+ചിറപ്പുറത്ത് കുടുംബത്തിന്റെ മരുമകനും പ്രശസ്ത നടനും സംവിധായകനുമായ
+ബേസിൽ ജോസഫ് ഓൺലൈനായി നിർവഹിച്ചു.<br><br>
+
+കുടുംബ ജീവിതത്തിൽ 50 വർഷം പൂർത്തീകരിച്ച ദമ്പതികളെയും,
+75 വയസ് പൂർത്തീകരിച്ചവരെയും തദവസരത്തിൽ ആദരിക്കുകയും,
+10-ാം, 12-ാം ക്ലാസുകളിലെ സ്റ്റേറ്റ്, സി.ബി.എസ്.ഇ. പരീക്ഷകളിൽ
+ഉയർന്ന മാർക്ക് നേടിയ വിദ്യാർത്ഥികൾക്ക് ട്രോഫികൾ സമ്മാനിക്കുകയും ചെയ്തു.<br><br>
+
+തിമൊത്തി റ്റോം, അലീന എൽസാ കുരുവിള എന്നിവർ ഗാനങ്ങൾ ആലപിച്ചു.
+ജനറൽ സെക്രട്ടറി ജെർലിൻ കെ. മാത്യു വാർഷിക റിപ്പോർട്ടും,
+ട്രഷറർ ജോസഫ് ഏബ്രഹാം വരവുചെലവ് കണക്കും അവതരിപ്പിച്ചു.
+ജോയിന്റ് സെക്രട്ടറി കെ. വി. വർഗീസ് സ്വാഗതവും,
+വൈസ് പ്രസിഡന്റ് സാം സി. ജോൺ കൃതജ്ഞതയും രേഖപ്പെടുത്തി.<br><br>
+
+സമ്മേളനത്തിൽ 300-ൽ അധികം കുടുംബാംഗങ്ങൾ പങ്കെടുത്തു.
+പൊതു സമ്മേളനത്തിന് ശേഷം ഗാനമേളയും മിമിക്സ് പരേഡും നടത്തി.
 സ്നേഹ വിരുന്നോടുകൂടി രാത്രി 9.00 ന് സമ്മേളനം സമാപിച്ചു.
-`,
+`
+  ,
 
   event_full_en: `
 <strong>Thottakkad</strong> – The 90th Anniversary and Navathi Closing Ceremony of the
@@ -260,30 +288,30 @@ at the Thottakkad Tabor Mar Thoma Parish Hall.<br><br>
 
 The meeting began at 4:00 PM with a prayer led by Rev. Fr. Binu Joseph.
 Prayer songs were sung by Yohan Tom Chirappurath, Elsa Mani, and Marsha K. Jerlin.
-Bible reading was done by T. T. Thomas.
-Binu Abraham presented the condolence message remembering those who passed away
-during the last report year.<br><br>
+The Bible reading was done by T. T. Thomas.
+Binu Abraham presented the condolence message in remembrance of those who passed away
+during the previous report year.<br><br>
 
 The meeting was chaired by Family Association President Baji K. Varghese.
-Rev. Santhosh Philip, Vicar of Tabor Mar Thoma Parish, inaugurated the Navathi
-Closing Ceremony and delivered the blessing speech.
-Francis George M.P. conveyed his greetings.
+Rev. Santhosh Philip, Vicar of Thottakkad Tabor Mar Thoma Parish, inaugurated the Navathi
+Closing Ceremony and delivered the benedictory address.
+Francis George, M.P., conveyed his greetings.
 Very Rev. Aprem Ramban, Rev. Fr. Jacob Thomas, and Rev. Fr. Binu Joseph
 also delivered felicitation speeches.<br><br>
 
-Very Rev. Aprem Ramban, who was elevated to the Ramban position,
+Very Rev. Aprem Ramban, who was elevated to the rank of Ramban,
 and Rev. Fr. Jacob Thomas and Rev. Fr. Binu Joseph, who completed 25 years
-of priestly service, were honored with shawls.<br><br>
+of priestly service, were honored with ceremonial shawls.<br><br>
 
 The family website launched as part of the Navathi celebrations
 was inaugurated online by Basil Joseph, renowned actor and director
 and son-in-law of the Chirappurath family.<br><br>
 
 Couples who completed 50 years of married life,
-members who completed 75 years of age,
-and students who secured high marks in State and CBSE examinations
-in classes 10 and 12 were honored.
-Songs were performed by Timothy Tom and Aleena Elsa Kuruvila.<br><br>
+members who attained 75 years of age,
+and students who secured high marks in the State and CBSE examinations
+in Classes 10 and 12 were honored.
+Songs were performed by Timothy Tom and Aleena Elsa Kuruvilla.<br><br>
 
 General Secretary Jerlin K. Mathew presented the annual report,
 and Treasurer Joseph Abraham presented the financial statement.
@@ -291,9 +319,10 @@ Joint Secretary K. V. Varghese welcomed the gathering,
 and Vice President Sam C. John delivered the vote of thanks.<br><br>
 
 More than 300 family members participated.
-After the public meeting, a musical program and mimicry parade were held.
+After the public meeting, a musical program and a mimicry parade were held.
 The meeting concluded at 9:00 PM with a fellowship dinner.
-`,
+`
+,
 
 
 };
